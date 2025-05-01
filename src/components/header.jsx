@@ -15,7 +15,7 @@ export default function Header(){
                     <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-2">
                         <i className="fa fa-plane text-white text-sm"></i>
                     </div>
-                    <h1>SKYWINGS</h1>
+                    <h1>WanderLift Travel Co.</h1>
                 </div>
             </div>
 

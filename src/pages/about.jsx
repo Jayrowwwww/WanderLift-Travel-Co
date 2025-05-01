@@ -5,7 +5,7 @@ export default function About() {
         id: 1,
         name: "Sarah Johnson",
         position: "CEO & Founder",
-        bio: "With over 20 years in the aviation industry, Sarah founded SKYWINGS with a vision to transform the travel experience.",
+        bio: "With over 20 years in the aviation industry, Sarah founded WanderLift Travel Co. with a vision to transform the travel experience.",
         image:
             "https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520a%2520confident%2520female%2520executive%2520in%2520her%252040s%2520with%2520shoulder%2520length%2520hair%2520and%2520business%2520attire%252C%2520neutral%2520background%252C%2520warm%2520smile%252C%2520looking%2520directly%2520at%2520camera%252C%2520high%2520quality%2520corporate%2520portrait%2520with%2520soft%2520professional%2520lighting&width=300&height=300&seq=101&orientation=squarish",
         },
@@ -13,7 +13,7 @@ export default function About() {
         id: 2,
         name: "Michael Chen",
         position: "Chief Operations Officer",
-        bio: "Michael brings his expertise in global operations and logistics to ensure SKYWINGS delivers exceptional service worldwide.",
+        bio: "Michael brings his expertise in global operations and logistics to ensure WanderLift Travel Co. delivers exceptional service worldwide.",
         image:
             "https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520an%2520Asian%2520male%2520executive%2520in%2520his%252030s%2520wearing%2520business%2520attire%252C%2520confident%2520expression%252C%2520neutral%2520background%252C%2520corporate%2520portrait%2520with%2520professional%2520lighting%252C%2520high%2520quality%2520professional%2520photograph%2520for%2520company%2520website&width=300&height=300&seq=102&orientation=squarish",
         },
@@ -21,7 +21,7 @@ export default function About() {
         id: 3,
         name: "Amara Okafor",
         position: "Customer Experience Director",
-        bio: "Amara leads our customer satisfaction initiatives, ensuring every SKYWINGS journey exceeds expectations.",
+        bio: "Amara leads our customer satisfaction initiatives, ensuring every WanderLift Travel Co. journey exceeds expectations.",
         image:
             "https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520a%2520Black%2520female%2520executive%2520in%2520her%252030s%2520with%2520natural%2520hair%2520and%2520business%2520attire%252C%2520warm%2520smile%252C%2520neutral%2520background%252C%2520confident%2520pose%252C%2520high%2520quality%2520corporate%2520portrait%2520with%2520professional%2520lighting%2520for%2520company%2520website&width=300&height=300&seq=103&orientation=squarish",
         },
@@ -41,7 +41,7 @@ export default function About() {
         name: "Emma Thompson",
         location: "London, UK",
         quote:
-            "SKYWINGS made our family vacation to Greece absolutely seamless. From booking to landing, every detail was handled with care.",
+            "WanderLift Travel Co. made our family vacation to Greece absolutely seamless. From booking to landing, every detail was handled with care.",
         rating: 5,
         image:
             "https://readdy.ai/api/search-image?query=Portrait%220of%2520a%2520smiling%2520woman%2520in%2520her%252030s%2520with%2520blonde%2520hair%2520against%2520neutral%2520background%252C%2520natural%2520lighting%252C%2520casual%2520smart%2520attire%252C%2520friendly%2520expression%252C%2520high%2520quality%2520professional%2520photograph%2520with%2520soft%2520focus&width=100&height=100&seq=105&orientation=squarish",
@@ -51,7 +51,7 @@ export default function About() {
         name: "James Wilson",
         location: "Sydney, Australia",
         quote:
-            "As a frequent business traveler, I appreciate SKYWINGS' efficiency and attention to detail. Their premium service has made travel enjoyable again.",
+            "As a frequent business traveler, I appreciate WanderLift Travel Co.' efficiency and attention to detail. Their premium service has made travel enjoyable again.",
         rating: 5,
         image:
             "https://readdy.ai/api/search-image?query=Portrait%2520of%2520a%2520professional%2520man%2520in%2520his%252040s%2520with%2520short%2520hair%2520and%2520business%2520casual%2520attire%252C%2520confident%2520smile%252C%2520neutral%2520background%252C%2520high%2520quality%2520professional%2520photograph%2520with%2520soft%2520lighting&width=100&height=100&seq=106&orientation=squarish",
@@ -61,7 +61,7 @@ export default function About() {
         name: "Priya Sharma",
         location: "Mumbai, India",
         quote:
-            "The personalized service from SKYWINGS made our honeymoon trip unforgettable. Their attention to special occasions is truly remarkable.",
+            "The personalized service from WanderLift Travel Co. made our honeymoon trip unforgettable. Their attention to special occasions is truly remarkable.",
         rating: 5,
         image:
             "https://readdy.ai/api/search-image?query=Portrait%2520of%2520an%2520Indian%2520woman%2520in%2520her%252020s%2520with%2520long%2520dark%2520hair%2520and%2520casual%2520smart%2520attire%252C%2520warm%2520smile%252C%2520neutral%2520background%252C%2520high%2520quality%2520professional%2520photograph%2520with%2520soft%2520lighting&width=100&height=100&seq=107&orientation=squarish",
@@ -73,7 +73,7 @@ export default function About() {
         year: "2010",
         title: "Company Founded",
         description:
-            "SKYWINGS was established with a mission to revolutionize air travel experiences.",
+            "WanderLift Travel Co. was established with a mission to revolutionize air travel experiences.",
         },
         {
         year: "2013",
@@ -107,7 +107,7 @@ export default function About() {
                 <div className="absolute inset-0 z-0">
                     <img
                         src="https://readdy.ai/api/search-image?query=Modern%2520corporate%2520office%2520interior%2520with%2520blue%2520accent%2520lighting%252C%2520large%2520windows%2520with%2520city%2520view%252C%2520sleek%2520furniture%2520and%2520aviation%2520themed%2520elements%252C%2520professional%2520workspace%2520with%2520subtle%2520airplane%2520motifs%252C%2520elegant%2520reception%2520area%2520with%2520company%2520logo%252C%2520bright%2520airy%2520atmosphere&width=1440&height=600&seq=108&orientation=landscape"
-                        alt="SKYWINGS Office"
+                        alt="WanderLift Travel Co. Office"
                         className="w-full h-full object-cover"
                     />
 
@@ -121,7 +121,7 @@ export default function About() {
                         </h1>
 
                         <p className="text-lg text-blue-50 mb-8">
-                        Since 2010, SKYWINGS has been dedicated to transforming the way
+                        Since 2010, WanderLift Travel Co. has been dedicated to transforming the way
                         people experience air travel. What began as a small charter
                         service has grown into a global aviation company committed to
                         excellence, innovation, and unforgettable journeys.
@@ -190,7 +190,7 @@ export default function About() {
                         </h2>
 
                         <p className="text-gray-600 max-w-2xl mx-auto">
-                        At SKYWINGS, we're guided by a clear mission and core values that
+                        At WanderLift Travel Co., we're guided by a clear mission and core values that
                         shape every aspect of our service.
                         </p>
                     </div>
@@ -306,7 +306,7 @@ export default function About() {
                     Meet Our Leadership Team
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                    The passionate professionals behind SKYWINGS who work tirelessly
+                    The passionate professionals behind WanderLift Travel Co. who work tirelessly
                     to ensure your journey is extraordinary.
                     </p>
                 </div>
@@ -357,7 +357,7 @@ export default function About() {
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         Don't just take our word for it – hear from travelers who have
-                        experienced the SKYWINGS difference.
+                        experienced the WanderLift Travel Co. difference.
                     </p>
                 </div>
 
@@ -460,13 +460,13 @@ export default function About() {
                 <div className="container mx-auto px-4 relative z-10 text-center">
                     <div className="max-w-2xl mx-auto text-white">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                        Ready to Experience the SKYWINGS Difference?
+                        Ready to Experience the WanderLift Travel Co. Difference?
                         </h2>
                         
                         <p className="text-lg mb-8">
                         Join thousands of satisfied travelers who have discovered the
                         perfect blend of comfort, convenience, and exceptional service
-                        that defines the SKYWINGS experience.
+                        that defines the WanderLift Travel Co. experience.
                         </p>
 
                         <button className="bg-blue-500 text-white px-8 py-3 rounded-full text-lg font-medium !rounded-button whitespace-nowrap cursor-pointer">

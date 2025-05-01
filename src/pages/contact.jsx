@@ -9,7 +9,7 @@ export default function Contact() {
             <div className="absolute inset-0 z-0">
                 <img
                     src="https://readdy.ai/api/search-image?query=Modern%2520office%2520building%2520with%2520travel%2520agency%2520interior%2520visible%2520through%2520glass%2520windows%252C%2520professional%2520business%2520environment%2520with%2520blue%2520sky%2520and%2520cityscape%2520in%2520background%252C%2520gradient%2520fade%2520to%2520darker%2520blue%2520on%2520left%2520side%2520for%2520text%2520overlay%252C%2520clean%2520architectural%2520lines%252C%2520welcoming%2520entrance%2520with%2520subtle%2520travel%2520themed%2520elements&width=1440&height=500&seq=301&orientation=landscape"
-                    alt="SKYWINGS Office"
+                    alt="WanderLift Travel Co. Office"
                     className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-transparent"></div>
@@ -103,7 +103,7 @@ export default function Contact() {
                         </p>
 
                         <p className="text-gray-600 mb-2">
-                            <span className="font-medium">Email:</span> skywings@example.com
+                            <span className="font-medium">Email:</span> email@example.com
                         </p>
                     </div>
 
@@ -291,7 +291,7 @@ export default function Contact() {
                             loading="lazy" 
                             referrerpolicy="no-referrer-when-downgrade"
                             className="w-full h-full border-0"
-                            title="SKYWINGS Office Location"
+                            title="WanderLift Travel Co. Office Location"
                         ></iframe>
                     </div>
 

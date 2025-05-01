@@ -164,7 +164,7 @@ export default function Tour(){
                     <p className="text-lg text-blue-50 mb-8">
                         Discover handcrafted journeys to the world's most captivating
                         destinations. From cultural immersions to thrilling adventures,
-                        SKYWINGS offers premium tour experiences tailored to your travel
+                        WanderLift Travel Co. offers premium tour experiences tailored to your travel
                         aspirations.
                     </p>
                     <div className="bg-white p-4 rounded-xl shadow-lg">
@@ -426,7 +426,7 @@ export default function Tour(){
         <section className="container mx-auto px-4 py-16">
             <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                    Why Choose SKYWINGS Tours
+                    Why Choose WanderLift Travel Co. Tours
                 </h2>
 
                 <p className="text-gray-600 max-w-2xl mx-auto">

@@ -11,7 +11,7 @@ export default function Footer(){
                 <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-2">
                   <i className="fas fa-plane text-white text-sm"></i>
                 </div>
-                SKYWINGS
+                WanderLift Travel Co.
               </div>
               <p className="text-gray-400 mb-4">
                 Elevating your travel experience since 2010.
@@ -107,7 +107,7 @@ export default function Footer(){
 
                 <li className="flex items-center">
                   <i className="fas fa-envelope mr-2 text-blue-400"></i>
-                  <span className="text-gray-400">skywings@example.com</span>
+                  <span className="text-gray-400">email@example.com</span>
                 </li>
               </ul>
             </div>
@@ -139,7 +139,7 @@ export default function Footer(){
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-            <p>&copy; 2025 SKYWINGS. All rights reserved.</p>
+            <p>&copy; 2025 WanderLift Travel Co. . All rights reserved.</p>
             <span>Created by: Jerreh Romer Salera</span>
           </div>
         </div>

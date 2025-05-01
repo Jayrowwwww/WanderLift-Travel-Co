@@ -163,7 +163,7 @@ export default function Home() {
                     Popular Destinations
                     </h2>
                     <p className="text-gray-500">
-                    Unleash Your Wanderlust With Skywings
+                    Unleash Your Wanderlust With WanderLift Travel Co.
                     </p>
                 </div>
             </div>
@@ -315,7 +315,7 @@ export default function Home() {
                 <div className="md:w-2/3 p-8 flex flex-col justify-center">
                     <div className="mb-6">
                         <h2 className="text-4xl font-bold text-gray-800 mb-4">
-                            UNLEASH WANDERLUST WITH SKYWINGS
+                            UNLEASH WANDERLUST WITH WANDERLIFT TRAVEL CO.
                         </h2>
 
                         <p className="text-gray-600 mb-6">
