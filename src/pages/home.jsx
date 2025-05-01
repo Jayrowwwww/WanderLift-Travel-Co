@@ -50,51 +50,6 @@ export default function Home() {
             image:
                 "https://readdy.ai/api/search-image?query=Stunning%20view%20of%20Santorini%20with%20white%20buildings%20and%20blue%20domes%20overlooking%20the%20clear%20blue%20Aegean%20Sea.%20Beautiful%20coastal%20town%20built%20on%20cliffs%20with%20pastel%20colored%20houses%20and%20amazing%20ocean%20view.%20Bright%20sunny%20day%20with%20perfect%20blue%20sky.&width=400&height=250&seq=2&orientation=landscape",
         },
-        {
-            id: 6,
-            title: "Tropical Paradise",
-            location: "Bali, Indonesia",
-            rating: 4.8,
-            visits: "10K+ Visitors",
-            image:
-                "https://readdy.ai/api/search-image?query=Beautiful%20tropical%20island%20with%20crystal%20clear%20turquoise%20water%2C%20white%20sandy%20beaches%2C%20and%20lush%20green%20vegetation.%20Aerial%20view%20of%20a%20small%20island%20resort%20surrounded%20by%20coral%20reefs%20in%20Bali%2C%20Indonesia.%20Pristine%20beach%20paradise%20with%20bright%20sunny%20sky%20and%20calm%20ocean.&width=400&height=250&seq=1&orientation=landscape",
-        },
-        {
-            id: 7,
-            title: "Coastal Serenity",
-            location: "Santorini, Greece",
-            rating: 4.9,
-            visits: "15K+ Visitors",
-            image:
-                "https://readdy.ai/api/search-image?query=Stunning%20view%20of%20Santorini%20with%20white%20buildings%20and%20blue%20domes%20overlooking%20the%20clear%20blue%20Aegean%20Sea.%20Beautiful%20coastal%20town%20built%20on%20cliffs%20with%20pastel%20colored%20houses%20and%20amazing%20ocean%20view.%20Bright%20sunny%20day%20with%20perfect%20blue%20sky.&width=400&height=250&seq=2&orientation=landscape",
-        },
-        {
-            id: 8,
-            title: "Island Getaway",
-            location: "Maldives",
-            rating: 4.7,
-            visits: "8K+ Visitors",
-            image:
-                "https://readdy.ai/api/search-image?query=Luxurious%20overwater%20bungalows%20in%20the%20Maldives%20with%20pristine%20turquoise%20lagoon%20water.%20Wooden%20walkways%20connecting%20water%20villas%20over%20crystal%20clear%20ocean.%20Perfect%20tropical%20vacation%20destination%20with%20palm%20trees%20and%20white%20sand%20beaches%20visible%20in%20background.&width=400&height=250&seq=3&orientation=landscape",
-        },
-        {
-            id: 9,
-            title: "Tropical Paradise",
-            location: "Bali, Indonesia",
-            rating: 4.8,
-            visits: "10K+ Visitors",
-            image:
-                "https://readdy.ai/api/search-image?query=Beautiful%20tropical%20island%20with%20crystal%20clear%20turquoise%20water%2C%20white%20sandy%20beaches%2C%20and%20lush%20green%20vegetation.%20Aerial%20view%20of%20a%20small%20island%20resort%20surrounded%20by%20coral%20reefs%20in%20Bali%2C%20Indonesia.%20Pristine%20beach%20paradise%20with%20bright%20sunny%20sky%20and%20calm%20ocean.&width=400&height=250&seq=1&orientation=landscape",
-        },
-        {
-            id: 10,
-            title: "Coastal Serenity",
-            location: "Santorini, Greece",
-            rating: 4.9,
-            visits: "15K+ Visitors",
-            image:
-                "https://readdy.ai/api/search-image?query=Stunning%20view%20of%20Santorini%20with%20white%20buildings%20and%20blue%20domes%20overlooking%20the%20clear%20blue%20Aegean%20Sea.%20Beautiful%20coastal%20town%20built%20on%20cliffs%20with%20pastel%20colored%20houses%20and%20amazing%20ocean%20view.%20Bright%20sunny%20day%20with%20perfect%20blue%20sky.&width=400&height=250&seq=2&orientation=landscape",
-        },
     ];
 
     return (
@@ -118,12 +73,13 @@ export default function Home() {
                             adventures with our premium flight services.
                         </p>
                         <div className="flex space-x-4">
-                            <button className="bg-blue-500 text-white px-6 py-3 rounded-full text-sm font-medium !rounded-button whitespace-nowrap cursor-pointer">
-                            Book A Trip Now
+                            <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-medium cursor-pointer">
+                                Book A Trip Now
                             </button>
+
                             <button className="flex items-center text-gray-700 cursor-pointer">
-                            Know More
-                            <i className="fa fa-arrow-right ml-2"></i>
+                                Know More
+                                <i className="fa fa-arrow-right ml-2"></i>
                             </button>
                         </div>
 
@@ -136,10 +92,11 @@ export default function Home() {
                             />
                             </div>
                             <div>
-                            <p className="text-sm font-medium">Awesome Planes</p>
-                            <p className="text-xs text-gray-500">
-                                Modern fleet selection
-                            </p>
+                                <p className="text-sm font-medium">Awesome Planes</p>
+
+                                <p className="text-xs text-gray-500">
+                                    Modern fleet selection
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -158,12 +115,20 @@ export default function Home() {
         {/* Partners */}
         <div className="container mx-auto px-4 py-8 border-b">
             <div className="flex flex-wrap items-center justify-between">
-                <div className="text-sm text-gray-500 mr-4">Follow</div>
+                <div className="text-sm text-gray-500 mr-4">Follow us on:</div>
 
                 <div className="flex space-x-4 text-gray-400">
-                    <i className="fab fa-twitter cursor-pointer hover:text-blue-400"></i>
-                    <i className="fab fa-facebook cursor-pointer hover:text-blue-600"></i>
-                    <i className="fab fa-instagram cursor-pointer hover:text-pink-500"></i>
+                    <a href="#">
+                        <i className="fab fa-twitter cursor-pointer hover:text-sky-400"></i>
+                    </a>
+                    
+                    <a href="#">
+                        <i className="fab fa-facebook cursor-pointer hover:text-blue-600"></i>
+                    </a>
+
+                    <a href="#">
+                        <i className="fab fa-instagram cursor-pointer hover:text-pink-500"></i>
+                    </a>
                 </div>
 
                 <div className="flex flex-wrap items-center justify-center md:justify-end space-x-8 mt-4 md:mt-0">
@@ -239,7 +204,7 @@ export default function Home() {
                                     </span>
                                 </div>
 
-                                <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs !rounded-button whitespace-nowrap">
+                                <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs">
                                     <i className="fa fa-star mr-1"></i>
                                     {destination.rating}
                                 </div>
@@ -359,7 +324,7 @@ export default function Home() {
                             services ensure you get the most out of every journey.
                         </p>
 
-                        <button className="bg-blue-50 text-blue-500 px-6 py-3 rounded-full font-medium flex items-center justify-center w-full md:w-auto !rounded-button whitespace-nowrap cursor-pointer">
+                        <button className="bg-blue-50 text-blue-500 px-6 py-3 rounded-full font-medium flex items-center justify-center w-full md:w-auto cursor-pointer">
                             Book A Flight Now
                             <i className="fa fa-arrow-right ml-2"></i>
                         </button>

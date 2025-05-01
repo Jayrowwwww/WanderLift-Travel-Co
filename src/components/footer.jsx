@@ -48,7 +48,7 @@ export default function Footer(){
               <ul className="space-y-2">
                 <li>
                   <Link
-                    to="https://readdy.ai/home/93009027-9e16-44f5-8b30-59cb8b83f647/5c5fdfb5-8726-4df5-8081-048acd83c5ce"
+                    to="/"
                     data-readdy="true"
                     className="text-gray-400 hover:text-white cursor-pointer"
                   >
@@ -57,7 +57,7 @@ export default function Footer(){
                 </li>
                 <li>
                   <Link
-                    to="#"
+                    to="/about"
                     className="text-gray-400 hover:text-white cursor-pointer"
                   >
                     About Us
@@ -65,7 +65,7 @@ export default function Footer(){
                 </li>
                 <li>
                   <Link
-                    to="#"
+                    to=""
                     className="text-gray-400 hover:text-white cursor-pointer"
                   >
                     Services
@@ -73,7 +73,7 @@ export default function Footer(){
                 </li>
                 <li>
                   <Link
-                    to="#"
+                    to="/tour"
                     className="text-gray-400 hover:text-white cursor-pointer"
                   >
                     Destinations
@@ -81,7 +81,7 @@ export default function Footer(){
                 </li>
                 <li>
                   <Link
-                    to="#"
+                    to="/contact"
                     className="text-gray-400 hover:text-white cursor-pointer"
                   >
                     Contact

@@ -1,5 +1,5 @@
 export default function About() {
-    // Team members data
+
     const teamMembers = [
         {
         id: 1,
@@ -34,7 +34,7 @@ export default function About() {
             "https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520a%2520Latino%2520male%2520executive%2520in%2520his%252030s%2520with%2520short%2520dark%2520hair%2520and%2520business%2520casual%2520attire%252C%2520friendly%2520expression%252C%2520neutral%2520background%252C%2520high%2520quality%2520corporate%2520portrait%2520with%2520professional%2520lighting%2520for%2520technology%2520company%2520website&width=300&height=300&seq=104&orientation=squarish",
         },
     ];
-    // Testimonials data
+
     const testimonials = [
         {
         id: 1,
@@ -67,7 +67,7 @@ export default function About() {
             "https://readdy.ai/api/search-image?query=Portrait%2520of%2520an%2520Indian%2520woman%2520in%2520her%252020s%2520with%2520long%2520dark%2520hair%2520and%2520casual%2520smart%2520attire%252C%2520warm%2520smile%252C%2520neutral%2520background%252C%2520high%2520quality%2520professional%2520photograph%2520with%2520soft%2520lighting&width=100&height=100&seq=107&orientation=squarish",
         },
     ];
-    // Company Timeline data
+
     const timelineEvents = [
         {
         year: "2010",
@@ -156,7 +156,7 @@ export default function About() {
                         {timelineEvents.map((event, index) => (
                             <div
                                 key={index}
-                                className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+                                className={`flex items-center ${index % 2 === 0  ? "flex-row" : "flex-row-reverse"}`}
                             >
                                 <div className="w-1/2"></div>
                                     <div className="z-10 flex-shrink-0 w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center shadow-lg">

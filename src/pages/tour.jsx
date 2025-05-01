@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 
 export default function Tour(){
     const tourPackages = [
@@ -141,84 +140,8 @@ export default function Tour(){
         image:
             "https://readdy.ai/api/search-image?query=Happy%2520family%2520enjoying%2520vacation%2520on%2520beautiful%2520beach%252C%2520parents%2520and%2520children%2520playing%2520in%2520sand%2520and%2520shallow%2520water%252C%2520tropical%2520setting%2520with%2520palm%2520trees%2520and%2520clear%2520blue%2520sky%252C%2520joyful%2520expressions%252C%2520professional%2520family%2520travel%2520photography&width=400&height=300&seq=210&orientation=landscape",
         },
-    ];
-    // Customer reviews data
-    const customerReviews = [
-        {
-        id: 1,
-        name: "Michael Roberts",
-        tour: "Mediterranean Cruise Adventure",
-        rating: 5,
-        comment:
-            "The Mediterranean cruise exceeded all our expectations. The ship was luxurious, the staff attentive, and the excursions perfectly organized. SKYWINGS handled every detail flawlessly!",
-        image:
-            "https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520smiling%2520middle-aged%2520man%2520with%2520short%2520brown%2520hair%2520and%2520casual%2520business%2520attire%252C%2520neutral%2520background%252C%2520warm%2520friendly%2520expression%252C%2520good%2520lighting%252C%2520high%2520quality%2520portrait%2520photograph&width=80&height=80&seq=211&orientation=squarish",
-        },
-        {
-        id: 2,
-        name: "Jennifer Chen",
-        tour: "Japanese Cherry Blossom Tour",
-        rating: 5,
-        comment:
-            "Our cherry blossom tour in Japan was magical! The timing was perfect, and we saw the blossoms at their peak. The cultural experiences arranged by SKYWINGS gave us authentic insights into Japanese traditions.",
-        image:
-            "https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520smiling%2520Asian%2520woman%2520in%2520her%252030s%2520with%2520shoulder%2520length%2520black%2520hair%2520and%2520business%2520casual%2520attire%252C%2520neutral%2520background%252C%2520friendly%2520expression%252C%2520good%2520lighting%252C%2520high%2520quality%2520portrait%2520photograph&width=80&height=80&seq=212&orientation=squarish",
-        },
-        {
-        id: 3,
-        name: "David Williams",
-        tour: "African Safari Experience",
-        rating: 5,
-        comment:
-            "The safari exceeded our wildest dreams! We saw all of the Big Five within the first three days. The guides were incredibly knowledgeable, and the accommodations were luxurious even in remote locations.",
-        image:
-            "https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520smiling%2520Black%2520man%2520in%2520his%252040s%2520with%2520short%2520hair%2520and%2520business%2520casual%2520attire%252C%2520neutral%2520background%252C%2520confident%2520friendly%2520expression%252C%2520good%2520lighting%252C%2520high%2520quality%2520portrait%2520photograph&width=80&height=80&seq=213&orientation=squarish",
-        },
-    ];
-
-
-    const [destinationFilter, setDestinationFilter] = useState("All");
-    const [priceFilter, setPriceFilter] = useState("All");
-    const [durationFilter, setDurationFilter] = useState("All");
-    const [typeFilter, setTypeFilter] = useState("All");
-
-    const [activeReview, setActiveReview] = useState(0);
-    const destinations = [
-        "All",
-        ...new Set(tourPackages.map((tour) => tour.destination)),
-    ];
-    const tourTypes = ["All", ...new Set(tourPackages.map((tour) => tour.type))];
-    // Filter tours based on selected filters
-    const filteredTours = tourPackages.filter((tour) => {
-        return (
-        (destinationFilter === "All" || tour.destination === destinationFilter) &&
-        (priceFilter === "All" ||
-            (priceFilter === "Under $2000" && tour.price < 2000) ||
-            (priceFilter === "$2000-$3000" &&
-            tour.price >= 2000 &&
-            tour.price <= 3000) ||
-            (priceFilter === "Over $3000" && tour.price > 3000)) &&
-        (durationFilter === "All" ||
-            (durationFilter === "Under 7 days" && parseInt(tour.duration) < 7) ||
-            (durationFilter === "7-10 days" &&
-            parseInt(tour.duration) >= 7 &&
-            parseInt(tour.duration) <= 10) ||
-            (durationFilter === "Over 10 days" && parseInt(tour.duration) > 10)) &&
-        (typeFilter === "All" || tour.type === typeFilter)
-        );
-    });
-
-    const nextReview = () => {
-        setActiveReview((prev) =>
-        prev === customerReviews.length - 1 ? 0 : prev + 1,
-        );
-    };
-    const prevReview = () => {
-        setActiveReview((prev) =>
-        prev === 0 ? customerReviews.length - 1 : prev - 1,
-        );
-    };
-
+    ]; 
+    
     return (
         <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -235,13 +158,14 @@ export default function Tour(){
             <div className="container mx-auto px-8 py-24 relative z-10">
                 <div className="max-w-2xl text-white">
                     <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                    Explore Our <span className="text-blue-300">Tours</span>
+                        Explore Our <span className="text-blue-300">Tours</span>
                     </h1>
+                    
                     <p className="text-lg text-blue-50 mb-8">
-                    Discover handcrafted journeys to the world's most captivating
-                    destinations. From cultural immersions to thrilling adventures,
-                    SKYWINGS offers premium tour experiences tailored to your travel
-                    aspirations.
+                        Discover handcrafted journeys to the world's most captivating
+                        destinations. From cultural immersions to thrilling adventures,
+                        SKYWINGS offers premium tour experiences tailored to your travel
+                        aspirations.
                     </p>
                     <div className="bg-white p-4 rounded-xl shadow-lg">
                         <div className="flex flex-col md:flex-row gap-4">
@@ -254,11 +178,13 @@ export default function Tour(){
                                     <select
                                     className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 appearance-none text-gray-700"
                                     >
-                                    {destinations.map((destination) => (
-                                        <option>
-                                        {destination}
-                                        </option>
-                                    ))}
+                                        <option>All</option>
+                                        <option>Mediterranean</option>
+                                        <option>Japan</option>
+                                        <option>Kenya & Tanzania</option>
+                                        <option>Iceland</option>
+                                        <option>Indonesia</option>
+                                        <option>Argentina & Chile</option>
                                     </select>
 
                                     <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
@@ -271,6 +197,7 @@ export default function Tour(){
                                 <label className="text-gray-600 text-sm mb-1 block">
                                     When
                                 </label>
+                                
                                 <input
                                     type="date"
                                     className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 text-gray-700"
@@ -278,7 +205,7 @@ export default function Tour(){
                             </div>
 
                             <div className="md:self-end">
-                                <button className="w-full bg-blue-500 text-white px-6 py-2 rounded-lg font-medium !rounded-button whitespace-nowrap cursor-pointer">
+                                <button className="w-full bg-blue-500 text-white px-6 py-2 rounded-lg font-medium cursor-pointer">
                                     <i className="fa fa-search mr-2"></i> Search Tours
                                 </button>
                             </div>
@@ -317,9 +244,12 @@ export default function Tour(){
                             <h3 className="text-xl font-semibold text-gray-800 mb-2">
                             {category.name}
                             </h3>
+
                             <p className="text-gray-600 mb-4">{category.description}</p>
-                            <button className="text-blue-500 font-medium flex items-center cursor-pointer !rounded-button whitespace-nowrap">
-                            Explore <i className="fa fa-arrow-right ml-2"></i>
+
+                            <button className="text-blue-500 font-medium flex items-center cursor-pointer">
+                                Explore 
+                                <i className="fa fa-arrow-right ml-2"></i>
                             </button>
                         </div>
                     </div>
@@ -333,6 +263,7 @@ export default function Tour(){
                     <h2 className="text-3xl font-bold text-gray-800 mb-4">
                     Featured Tour Packages
                     </h2>
+
                     <p className="text-gray-600 max-w-2xl mx-auto">
                     Discover our most popular and highly-rated travel experiences
                     curated for unforgettable journeys.
@@ -341,89 +272,94 @@ export default function Tour(){
                 {/* Filter Options */}
                 <div className="bg-white p-6 rounded-xl shadow-lg mb-8">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                    <div>
-                        <label className="text-gray-600 text-sm mb-1 block">
-                        Destination
-                        </label>
+                        <div>
+                            <label className="text-gray-600 text-sm mb-1 block">
+                                Destination
+                            </label>
 
-                        <div className="relative">
+                            <div className="relative">
+                                <select
+                                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 appearance-none text-gray-700"
+                                >
+                                    <option>All</option>
+                                    <option>Mediterranean</option>
+                                    <option>Japan</option>
+                                    <option>Kenya & Tanzania</option>
+                                    <option>Iceland</option>
+                                    <option>Indonesia</option>
+                                    <option>Argentina & Chile</option>
+                                </select>
+
+                                <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                                    <i className="fa fa-chevron-down text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label className="text-gray-600 text-sm mb-1 block">
+                                Price Range
+                            </label>
+
+                            <div className="relative">
+                                <select
+                                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 appearance-none text-gray-700"
+                                >
+                                    <option value="All">All Prices</option>
+                                    <option value="Under $2000">Under $2,000</option>
+                                    <option value="$2000-$3000">$2,000 - $3,000</option>
+                                    <option value="Over $3000">Over $3,000</option>
+                                </select>
+
+                                <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                                    <i className="fa fa-chevron-down text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label className="text-gray-600 text-sm mb-1 block">
+                            Duration
+                            </label>
+                            <div className="relative">
                             <select
                                 className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 appearance-none text-gray-700"
                             >
-                                {destinations.map((destination) => (
-                                <option value={destination}>
-                                    {destination}
-                                </option>
-                                ))}
+                                <option value="All">Any Duration</option>
+                                <option value="Under 7 days">Under 7 days</option>
+                                <option value="7-10 days">7-10 days</option>
+                                <option value="Over 10 days">Over 10 days</option>
                             </select>
-
                             <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
                                 <i className="fa fa-chevron-down text-gray-400"></i>
                             </div>
-                        </div>
-                    </div>
-                    <div>
-                        <label className="text-gray-600 text-sm mb-1 block">
-                            Price Range
-                        </label>
-
-                        <div className="relative">
-                            <select
-                                className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 appearance-none text-gray-700"
-                            >
-                                <option value="All">All Prices</option>
-                                <option value="Under $2000">Under $2,000</option>
-                                <option value="$2000-$3000">$2,000 - $3,000</option>
-                                <option value="Over $3000">Over $3,000</option>
-                            </select>
-
-                            <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                                <i className="fa fa-chevron-down text-gray-400"></i>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <label className="text-gray-600 text-sm mb-1 block">
-                        Duration
-                        </label>
-                        <div className="relative">
-                        <select
-                            className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 appearance-none text-gray-700"
-                        >
-                            <option value="All">Any Duration</option>
-                            <option value="Under 7 days">Under 7 days</option>
-                            <option value="7-10 days">7-10 days</option>
-                            <option value="Over 10 days">Over 10 days</option>
-                        </select>
-                        <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                            <i className="fa fa-chevron-down text-gray-400"></i>
-                        </div>
-                        </div>
-                    </div>
-                    <div>
-                        <label className="text-gray-600 text-sm mb-1 block">
-                        Tour Type
-                        </label>
-                        <div className="relative">
-                        <select
-                            className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 appearance-none text-gray-700"
-                        >
-                            {tourTypes.map((type) => (
-                            <option value={type}>
-                                {type}
-                            </option>
-                            ))}
-                        </select>
-                        <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                            <i className="fa fa-chevron-down text-gray-400"></i>
-                        </div>
+                        <div>
+                            <label className="text-gray-600 text-sm mb-1 block">
+                                Tour Type
+                            </label>
+
+                            <div className="relative">
+                                <select
+                                    className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 appearance-none text-gray-700"
+                                >
+                                    <option>All</option>
+                                    <option>cruise</option>
+                                    <option>cultural</option>
+                                    <option>adventure</option>
+                                    <option>luxury</option>
+                                    <option>family</option>
+                                </select>
+
+                                <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                                    <i className="fa fa-chevron-down text-gray-400"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             {/* Tour Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {filteredTours.map((tour) => (
+                    {tourPackages.map((tour) => (
                         <div
                         key={tour.id}
                         className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
@@ -470,29 +406,29 @@ export default function Tour(){
                                     </ul>
                                 </div>
 
-                                <button className="w-full bg-blue-500 text-white py-2 rounded-lg font-medium mt-2 !rounded-button whitespace-nowrap cursor-pointer">
-                                Book Now
+                                <button className="w-full bg-blue-500 text-white py-2 rounded-lg font-medium mt-2  cursor-pointer" onClick={() => alert(`Booking ${tour.name}!`)}>
+                                    Book Now
                                 </button>
                             </div>
                         </div>
                     ))}
                 </div>
 
-                {filteredTours.length > 0 && (
-                    <div className="mt-12 text-center">
-                    <button className="bg-white border border-blue-500 text-blue-500 px-6 py-2 rounded-full font-medium hover:bg-blue-50 transition-colors !rounded-button whitespace-nowrap cursor-pointer">
+
+                <div className="mt-12 text-center">
+                    <button className="bg-white border border-blue-500 text-blue-500 px-6 py-2 rounded-full font-medium hover:bg-blue-50 transition-colors cursor-pointer">
                         View All Tours
                     </button>
-                    </div>
-                )}
+                </div>
             </div>
         </section>
-        {/* Why Choose Us */}
+        {/* Why Choose Us Section*/}
         <section className="container mx-auto px-4 py-16">
             <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
                     Why Choose SKYWINGS Tours
                 </h2>
+
                 <p className="text-gray-600 max-w-2xl mx-auto">
                     We're committed to providing exceptional travel experiences with
                     attention to every detail.
@@ -506,12 +442,12 @@ export default function Tour(){
                     </div>
 
                     <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                    Expert Guides
+                        Expert Guides
                     </h3>
 
                     <p className="text-gray-600">
-                    Our professional guides bring destinations to life with their
-                    in-depth knowledge and passion.
+                        Our professional guides bring destinations to life with their
+                        in-depth knowledge and passion.
                     </p>
                 </div>
 
@@ -521,12 +457,12 @@ export default function Tour(){
                     </div>
 
                     <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                    Curated Experiences
+                        Curated Experiences
                     </h3>
 
                     <p className="text-gray-600">
-                    Each itinerary is thoughtfully designed to include both iconic
-                    highlights and hidden gems.
+                        Each itinerary is thoughtfully designed to include both iconic
+                        highlights and hidden gems.
                     </p>
                 </div>
 
@@ -536,12 +472,12 @@ export default function Tour(){
                     </div>
 
                     <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                    Best Price Guarantee
+                        Best Price Guarantee
                     </h3>
 
                     <p className="text-gray-600">
-                    We offer competitive pricing without compromising on the quality
-                    of your travel experience.
+                        We offer competitive pricing without compromising on the quality
+                        of your travel experience.
                     </p>
                 </div>
 
@@ -551,92 +487,13 @@ export default function Tour(){
                     </div>
 
                     <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                    24/7 Support
+                        24/7 Support
                     </h3>
                     
                     <p className="text-gray-600">
-                    Our dedicated support team is available around the clock to assist
-                    with any questions or concerns.
+                        Our dedicated support team is available around the clock to assist
+                        with any questions or concerns.
                     </p>
-                </div>
-            </div>
-        </section>
-        {/* Customer Reviews */}
-        <section className="bg-gray-50 py-16">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                    What Our Travelers Say
-                    </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
-                    Real experiences from travelers who have explored the world with
-                    SKYWINGS Tours.
-                    </p>
-                </div>
-                
-                <div className="relative max-w-4xl mx-auto">
-                    <div className="bg-white p-8 rounded-xl shadow-lg">
-                        <div className="flex flex-col md:flex-row items-center">
-                            <div className="md:w-1/4 mb-6 md:mb-0 flex justify-center">
-                                <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-blue-100">
-                                    <img
-                                    src={customerReviews[activeReview].image}
-                                    alt={customerReviews[activeReview].name}
-                                    className="w-full h-full object-cover"
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="md:w-3/4 md:pl-8">
-                                <div className="text-yellow-400 mb-4">
-                                    {[...Array(customerReviews[activeReview].rating)].map(
-                                    (_, i) => (
-                                        <i key={i} className="fa fa-star"></i>
-                                    ),
-                                    )}
-                                </div>
-                                <p className="text-gray-600 italic mb-4 text-lg">
-                                    "{customerReviews[activeReview].comment}"
-                                </p>
-
-                                <div>
-                                    <p className="font-semibold text-gray-800">
-                                    {customerReviews[activeReview].name}
-                                    </p>
-                                    <p className="text-blue-500 text-sm">
-                                    {customerReviews[activeReview].tour}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div className="absolute top-1/2 -left-4 transform -translate-y-1/2">
-                    <button
-                        onClick={prevReview}
-                        className="w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center cursor-pointer hover:bg-gray-100 !rounded-button whitespace-nowrap"
-                    >
-                        <i className="fa fa-chevron-left text-gray-600"></i>
-                    </button>
-                    </div>
-                    <div className="absolute top-1/2 -right-4 transform -translate-y-1/2">
-                    <button
-                        onClick={nextReview}
-                        className="w-10 h-10 rounded-full bg-blue-500 shadow-lg flex items-center justify-center cursor-pointer !rounded-button whitespace-nowrap"
-                    >
-                        <i className="fa fa-chevron-right text-white"></i>
-                    </button>
-                    </div>
-                    <div className="flex justify-center mt-6 space-x-2">
-                    {customerReviews.map((_, index) => (
-                        <button
-                        key={index}
-                        onClick={() => setActiveReview(index)}
-                        className={`w-3 h-3 rounded-full ${activeReview === index ? "bg-blue-500" : "bg-gray-300"} cursor-pointer`}
-                        aria-label={`Go to review ${index + 1}`}
-                        ></button>
-                    ))}
-                    </div>
                 </div>
             </div>
         </section>
