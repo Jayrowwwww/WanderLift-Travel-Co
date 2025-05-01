@@ -46,9 +46,9 @@ export default function Header(){
                 </Link>
             </nav>
 
-            <button className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium !rounded-button whitespace-nowrap cursor-pointer">
-                Book Trip
-            </button>
+            <Link to="/booking" className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium !rounded-button whitespace-nowrap cursor-pointer">
+                    Book Trip
+            </Link>
         </header>
     )
 }

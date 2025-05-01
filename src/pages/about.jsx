@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 export default function About() {
     // Team members data
     const teamMembers = [
@@ -46,7 +44,7 @@ export default function About() {
             "SKYWINGS made our family vacation to Greece absolutely seamless. From booking to landing, every detail was handled with care.",
         rating: 5,
         image:
-            "https://readdy.ai/api/search-image?query=Portrait%2520of%2520a%2520smiling%2520woman%2520in%2520her%252030s%2520with%2520blonde%2520hair%2520against%2520neutral%2520background%252C%2520natural%2520lighting%252C%2520casual%2520smart%2520attire%252C%2520friendly%2520expression%252C%2520high%2520quality%2520professional%2520photograph%2520with%2520soft%2520focus&width=100&height=100&seq=105&orientation=squarish",
+            "https://readdy.ai/api/search-image?query=Portrait%220of%2520a%2520smiling%2520woman%2520in%2520her%252030s%2520with%2520blonde%2520hair%2520against%2520neutral%2520background%252C%2520natural%2520lighting%252C%2520casual%2520smart%2520attire%252C%2520friendly%2520expression%252C%2520high%2520quality%2520professional%2520photograph%2520with%2520soft%2520focus&width=100&height=100&seq=105&orientation=squarish",
         },
         {
         id: 2,
@@ -101,165 +99,173 @@ export default function About() {
         description:
             "Committed to carbon-neutral operations with our Green Skies program.",
         },
-    ];
-    // State for active testimonial
-    const [activeTestimonial, setActiveTestimonial] = useState(0);
-    // Testimonial navigation
-    const nextTestimonial = () => {
-        setActiveTestimonial((prev) =>
-        prev === testimonials.length - 1 ? 0 : prev + 1,
-        );
-    };
-    const prevTestimonial = () => {
-        setActiveTestimonial((prev) =>
-        prev === 0 ? testimonials.length - 1 : prev - 1,
-        );
-    };
+    ]
     return (
         <div className="min-h-screen bg-white">
         {/* Hero Section */}
             <section className="relative overflow-hidden">
                 <div className="absolute inset-0 z-0">
-                <img
-                    src="https://readdy.ai/api/search-image?query=Modern%2520corporate%2520office%2520interior%2520with%2520blue%2520accent%2520lighting%252C%2520large%2520windows%2520with%2520city%2520view%252C%2520sleek%2520furniture%2520and%2520aviation%2520themed%2520elements%252C%2520professional%2520workspace%2520with%2520subtle%2520airplane%2520motifs%252C%2520elegant%2520reception%2520area%2520with%2520company%2520logo%252C%2520bright%2520airy%2520atmosphere&width=1440&height=600&seq=108&orientation=landscape"
-                    alt="SKYWINGS Office"
-                    className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-transparent"></div>
+                    <img
+                        src="https://readdy.ai/api/search-image?query=Modern%2520corporate%2520office%2520interior%2520with%2520blue%2520accent%2520lighting%252C%2520large%2520windows%2520with%2520city%2520view%252C%2520sleek%2520furniture%2520and%2520aviation%2520themed%2520elements%252C%2520professional%2520workspace%2520with%2520subtle%2520airplane%2520motifs%252C%2520elegant%2520reception%2520area%2520with%2520company%2520logo%252C%2520bright%2520airy%2520atmosphere&width=1440&height=600&seq=108&orientation=landscape"
+                        alt="SKYWINGS Office"
+                        className="w-full h-full object-cover"
+                    />
+
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-transparent"></div>
                 </div>
+
                 <div className="container mx-auto px-8 py-24 relative z-10">
-                <div className="max-w-2xl text-white">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                    Our <span className="text-blue-300">Story</span>
-                    </h1>
-                    <p className="text-lg text-blue-50 mb-8">
-                    Since 2010, SKYWINGS has been dedicated to transforming the way
-                    people experience air travel. What began as a small charter
-                    service has grown into a global aviation company committed to
-                    excellence, innovation, and unforgettable journeys.
-                    </p>
-                    <button className="bg-blue-500 text-white px-6 py-3 rounded-full text-sm font-medium !rounded-button whitespace-nowrap cursor-pointer">
-                    Our Services
-                    </button>
-                </div>
+                    <div className="max-w-2xl text-white">
+                        <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                            Our <span className="text-blue-300">Story</span>
+                        </h1>
+
+                        <p className="text-lg text-blue-50 mb-8">
+                        Since 2010, SKYWINGS has been dedicated to transforming the way
+                        people experience air travel. What began as a small charter
+                        service has grown into a global aviation company committed to
+                        excellence, innovation, and unforgettable journeys.
+                        </p>
+
+                        <button className="bg-blue-500 text-white px-6 py-3 rounded-full text-sm font-medium !rounded-button whitespace-nowrap cursor-pointer">
+                            Our Services
+                        </button>
+                    </div>
                 </div>
             </section>
+
             {/* Company History Timeline */}
             <section className="container mx-auto px-4 py-16">
                 <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                    Our Journey Through The Years
-                </h2>
-                <p className="text-gray-600 max-w-2xl mx-auto">
-                    From our humble beginnings to becoming a leader in the aviation
-                    industry, our path has been defined by innovation, dedication, and a
-                    passion for exceptional travel experiences.
-                </p>
-                </div>
-                <div className="relative">
-                {/* Timeline center line */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-100"></div>
-                {/* Timeline events */}
-                <div className="space-y-12">
-                    {timelineEvents.map((event, index) => (
-                    <div
-                        key={index}
-                        className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
-                    >
-                        <div className="w-1/2"></div>
-                            <div className="z-10 flex-shrink-0 w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center shadow-lg">
-                                <i className="fa fa-plane text-white"></i>
-                            </div>
+                    <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                        Our Journey Through The Years
+                    </h2>
 
-                        <div
-                            className={`w-1/2 p-6 ${index % 2 === 0 ? "pr-12" : "pl-12"}`}
-                            >
-                            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-                                <span className="text-blue-500 text-2xl font-bold">
-                                {event.year}
-                                </span>
-                                <h3 className="text-xl font-semibold text-gray-800 mt-2">
-                                {event.title}
-                                </h3>
-                                <p className="text-gray-600 mt-2">{event.description}</p>
-                            </div>
-                        </div>
-                    </div>
-                    ))}
+                    <p className="text-gray-600 max-w-2xl mx-auto">
+                        From our humble beginnings to becoming a leader in the aviation
+                        industry, our path has been defined by innovation, dedication, and a
+                        passion for exceptional travel experiences.
+                    </p>
                 </div>
+
+                <div className="relative">
+                    {/* Timeline center line */}
+                    <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-100"></div>
+                    {/* Timeline events */}
+                    <div className="space-y-12">
+                        {timelineEvents.map((event, index) => (
+                            <div
+                                key={index}
+                                className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+                            >
+                                <div className="w-1/2"></div>
+                                    <div className="z-10 flex-shrink-0 w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center shadow-lg">
+                                        <i className="fa fa-plane text-white"></i>
+                                    </div>
+
+                                <div
+                                    className={`w-1/2 p-6 ${index % 2 === 0 ? "pr-12" : "pl-12"}`}
+                                    >
+                                    <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                                        <span className="text-blue-500 text-2xl font-bold">
+                                        {event.year}
+                                        </span>
+                                        <h3 className="text-xl font-semibold text-gray-800 mt-2">
+                                        {event.title}
+                                        </h3>
+                                        <p className="text-gray-600 mt-2">{event.description}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
             {/* Mission & Values */}
             <section className="bg-gray-50 py-16">
                 <div className="container mx-auto px-4">
-                <div className="text-center mb-12">
-                    <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                    Our Mission & Values
-                    </h2>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
-                    At SKYWINGS, we're guided by a clear mission and core values that
-                    shape every aspect of our service.
-                    </p>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {/* Mission */}
-                    <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                        <i className="fa fa-compass text-blue-500 text-2xl"></i>
+                    <div className="text-center mb-12">
+                        <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                        Our Mission & Values
+                        </h2>
+
+                        <p className="text-gray-600 max-w-2xl mx-auto">
+                        At SKYWINGS, we're guided by a clear mission and core values that
+                        shape every aspect of our service.
+                        </p>
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                        Our Mission
-                    </h3>
-                    <p className="text-gray-600">
-                        To connect people with extraordinary destinations through safe,
-                        comfortable, and memorable flight experiences that exceed
-                        expectations at every altitude.
-                    </p>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Mission */}
+                        <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                                <i className="fa fa-compass text-blue-500 text-2xl"></i>
+                            </div>
+
+                            <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                                Our Mission
+                            </h3>
+
+                            <p className="text-gray-600">
+                                To connect people with extraordinary destinations through safe,
+                                comfortable, and memorable flight experiences that exceed
+                                expectations at every altitude.
+                            </p>
+
+                            </div>
+                            {/* Vision */}
+                            <div className="bg-blue-500 text-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6">
+                                    <i className="fa fa-eye text-sky-600 text-2xl"></i>
+                                </div>
+                                    
+                                <h3 className="text-xl font-semibold mb-4">Our Vision</h3>
+
+                                <p className="text-blue-50">
+                                    To be the world's most trusted aviation company, setting new
+                                    standards for customer-centric travel experiences while leading
+                                    the industry in innovation and sustainability.
+                                </p>
+                            </div>
+
+                            {/* Values */}
+                            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                                    <i className="fa fa-heart text-blue-500 text-2xl"></i>
+                                </div>
+
+                                <h3 className="text-xl font-semibold text-gray-800 mb-4">
+                                    Our Values
+                                </h3>
+
+                                <ul className="text-gray-600 space-y-2">
+                                    <li className="flex items-center">
+                                        <i className="fa fa-check text-blue-500 mr-2"></i> Safety
+                                        Above All
+                                    </li>
+
+                                    <li className="flex items-center">
+                                        <i className="fa fa-check text-blue-500 mr-2"></i> Customer
+                                        Excellence
+                                    </li>
+
+                                    <li className="flex items-center">
+                                        <i className="fa fa-check text-blue-500 mr-2"></i> Innovation
+                                        & Adaptability
+                                    </li>
+
+                                    <li className="flex items-center">
+                                        <i className="fa fa-check text-blue-500 mr-2"></i>{" "}
+                                        Environmental Responsibility
+                                    </li>
+
+                                    <li className="flex items-center">
+                                        <i className="fa fa-check text-blue-500 mr-2"></i> Integrity
+                                        & Transparency
+                                    </li>
+                                </ul>
+                        </div>
                     </div>
-                    {/* Vision */}
-                    <div className="bg-blue-500 text-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div className="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6">
-                        <i className="fa fa-eye text-white text-2xl"></i>
-                    </div>
-                    <h3 className="text-xl font-semibold mb-4">Our Vision</h3>
-                    <p className="text-blue-50">
-                        To be the world's most trusted aviation company, setting new
-                        standards for customer-centric travel experiences while leading
-                        the industry in innovation and sustainability.
-                    </p>
-                    </div>
-                    {/* Values */}
-                    <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                        <i className="fa fa-heart text-blue-500 text-2xl"></i>
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-4">
-                        Our Values
-                    </h3>
-                    <ul className="text-gray-600 space-y-2">
-                        <li className="flex items-center">
-                        <i className="fa fa-check text-blue-500 mr-2"></i> Safety
-                        Above All
-                        </li>
-                        <li className="flex items-center">
-                        <i className="fa fa-check text-blue-500 mr-2"></i> Customer
-                        Excellence
-                        </li>
-                        <li className="flex items-center">
-                        <i className="fa fa-check text-blue-500 mr-2"></i> Innovation
-                        & Adaptability
-                        </li>
-                        <li className="flex items-center">
-                        <i className="fa fa-check text-blue-500 mr-2"></i>{" "}
-                        Environmental Responsibility
-                        </li>
-                        <li className="flex items-center">
-                        <i className="fa fa-check text-blue-500 mr-2"></i> Integrity
-                        & Transparency
-                        </li>
-                    </ul>
-                    </div>
-                </div>
                 </div>
             </section>
             {/* Achievement Showcase */}
@@ -355,72 +361,23 @@ export default function About() {
                     </p>
                 </div>
 
-                <div className="relative max-w-4xl mx-auto">
-                    <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
-                        <div className="flex flex-col md:flex-row items-center">
-                            <div className="md:w-1/4 mb-6 md:mb-0 flex justify-center">
-                                <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-blue-100">
-                                    <img
-                                        src={testimonials[activeTestimonial].image}
-                                        alt={testimonials[activeTestimonial].name}
-                                        className="w-full h-full object-cover"
-                                    />
+                <div className="flex flex-col space-y-15">
+                    {testimonials.map((testimonial) => (
+                        <div key={testimonial.id} className="shadow-lg px-5 py-10 rounded-xl">
+                            <div className="flex">
+                                <div className="flex flex-col items-center bg-sky-400 rounded-xl">
+                                    <img src={testimonial.image} alt={testimonial.name} className="rounded-xl"/>
+                                    <h2>Rating: {testimonial.rating} / 5</h2>
                                 </div>
-                            </div>
 
-                            <div className="md:w-3/4 md:pl-8">
-                                <div className="text-blue-500 mb-4">
-                                    {[...Array(testimonials[activeTestimonial].rating)].map(
-                                        (_, i) => (
-                                        <i key={i} className="fa fa-star"></i>
-                                        ),
-                                    )}
-                                    </div>
-
-                                    <p className="text-gray-600 italic mb-4 text-lg">
-                                    "{testimonials[activeTestimonial].quote}"
-                                    </p>
-                                <div>
-
-                                    <p className="font-semibold text-gray-800">
-                                        {testimonials[activeTestimonial].name}
-                                    </p>
-
-                                    <p className="text-gray-500 text-sm">
-                                        {testimonials[activeTestimonial].location}
-                                    </p>
+                                <div className="ml-10">
+                                    <h1 className="text-2xl font-semibold">{testimonial.name}</h1>
+                                    <h3 className="text-lg">{testimonial.location}</h3>
+                                    <p className="mt-2">{testimonial.quote}</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div className="absolute top-1/2 -left-4 transform -translate-y-1/2">
-                        <button
-                            onClick={prevTestimonial}
-                            className="w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center cursor-pointer hover:bg-gray-100 !rounded-button whitespace-nowrap"
-                            >
-                            <i className="fa fa-chevron-left text-gray-600"></i>
-                        </button>
-                    </div>
-
-                    <div className="absolute top-1/2 -right-4 transform -translate-y-1/2">
-                        <button
-                            onClick={nextTestimonial}
-                            className="w-10 h-10 rounded-full bg-blue-500 shadow-lg flex items-center justify-center cursor-pointer !rounded-button whitespace-nowrap"
-                            >
-                            <i className="fa fa-chevron-right text-white"></i>
-                        </button>
-                    </div>
-                    <div className="flex justify-center mt-6 space-x-2">
-                        {testimonials.map((_, index) => (
-                        <button
-                            key={index}
-                            onClick={() => setActiveTestimonial(index)}
-                            className={`w-3 h-3 rounded-full ${activeTestimonial === index ? "bg-blue-500" : "bg-gray-300"} cursor-pointer`}
-                            aria-label={`Go to testimonial ${index + 1}`}
-                        ></button>
-                        ))}
-                    </div>
+                    ))}
                 </div>
             </section>
             {/* Awards & Recognition */}
