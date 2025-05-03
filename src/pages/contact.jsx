@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Header from "../components/header"
+import bg from '../assets/_imgs/bg/contact_page.jpg'
 
 export default function Contact() {
 
@@ -10,7 +11,7 @@ export default function Contact() {
         <section className="relative overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <img
-                    src="https://readdy.ai/api/search-image?query=Modern%2520office%2520building%2520with%2520travel%2520agency%2520interior%2520visible%2520through%2520glass%2520windows%252C%2520professional%2520business%2520environment%2520with%2520blue%2520sky%2520and%2520cityscape%2520in%2520background%252C%2520gradient%2520fade%2520to%2520darker%2520blue%2520on%2520left%2520side%2520for%2520text%2520overlay%252C%2520clean%2520architectural%2520lines%252C%2520welcoming%2520entrance%2520with%2520subtle%2520travel%2520themed%2520elements&width=1440&height=500&seq=301&orientation=landscape"
+                    src={bg}
                     alt="WanderLift Travel Co. Office"
                     className="w-full h-full object-cover"
                 />

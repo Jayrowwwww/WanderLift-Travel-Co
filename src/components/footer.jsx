@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import logo from '/favicon.png'
 
 export default function Footer(){
 
@@ -8,8 +9,8 @@ export default function Footer(){
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <div className="text-2xl font-bold flex items-center mb-4">
-                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-2">
-                  <i className="fas fa-plane text-white text-sm"></i>
+                <div className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center mr-2">
+                  <img src={logo} alt="logo" />
                 </div>
                 WanderLift Travel Co.
               </div>
@@ -61,14 +62,6 @@ export default function Footer(){
                     className="text-gray-400 hover:text-white cursor-pointer"
                   >
                     About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to=""
-                    className="text-gray-400 hover:text-white cursor-pointer"
-                  >
-                    Services
                   </Link>
                 </li>
                 <li>

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import logo from '/favicon.png'
 
 export default function Header(){
 
@@ -11,12 +12,14 @@ export default function Header(){
     return(
         <header className="container mx-auto px-4 py-4 flex items-center justify-between">
             <div className="flex items-center">
-                <div className="text-2xl font-bold text-gray-800 flex items-center">
-                    <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-2">
-                        <i className="fa fa-plane text-white text-sm"></i>
+                <Link to="/" className="cursor-pointer">
+                    <div className="text-2xl font-bold text-gray-800 flex items-center">
+                        <div className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center mr-2">
+                            <img src={logo} alt="logo" />
+                        </div>
+                        WonderLift Travel Co.
                     </div>
-                    <h1>WanderLift Travel Co.</h1>
-                </div>
+                </Link>
             </div>
 
             <button className='md:hidden flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500' onClick={handleMenuClick}>
@@ -52,7 +55,7 @@ export default function Header(){
                     CONTACT
                 </Link>
 
-                <Link to="#" className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium !rounded-button whitespace-nowrap cursor-pointer">
+                <Link to="/booking" className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium !rounded-button whitespace-nowrap cursor-pointer">
                     Book Trip
                 </Link>
             </nav>

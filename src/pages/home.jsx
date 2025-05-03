@@ -1,60 +1,14 @@
-import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/header";
+import destinations from "../data_components/destinations";
+import Plane from  "../assets/_imgs/bg/first_page.jpg"
+import woman from '../assets/_imgs/bg/first_page_lower.jpg'
 
 export default function Home() {
-
-    const destinations = [
-        {
-            id: 1,
-            title: "Tropical Paradise",
-            location: "Bali, Indonesia",
-            rating: 4.8,
-            visits: "10K+ Visitors",
-            image:
-                "https://readdy.ai/api/search-image?query=Beautiful%20tropical%20island%20with%20crystal%20clear%20turquoise%20water%2C%20white%20sandy%20beaches%2C%20and%20lush%20green%20vegetation.%20Aerial%20view%20of%20a%20small%20island%20resort%20surrounded%20by%20coral%20reefs%20in%20Bali%2C%20Indonesia.%20Pristine%20beach%20paradise%20with%20bright%20sunny%20sky%20and%20calm%20ocean.&width=400&height=250&seq=1&orientation=landscape",
-        },
-        {
-            id: 2,
-            title: "Coastal Serenity",
-            location: "Santorini, Greece",
-            rating: 4.9,
-            visits: "15K+ Visitors",
-            image:
-                "https://readdy.ai/api/search-image?query=Stunning%20view%20of%20Santorini%20with%20white%20buildings%20and%20blue%20domes%20overlooking%20the%20clear%20blue%20Aegean%20Sea.%20Beautiful%20coastal%20town%20built%20on%20cliffs%20with%20pastel%20colored%20houses%20and%20amazing%20ocean%20view.%20Bright%20sunny%20day%20with%20perfect%20blue%20sky.&width=400&height=250&seq=2&orientation=landscape",
-        },
-        {
-            id: 3,
-            title: "Island Getaway",
-            location: "Maldives",
-            rating: 4.7,
-            visits: "8K+ Visitors",
-            image:
-                "https://readdy.ai/api/search-image?query=Luxurious%20overwater%20bungalows%20in%20the%20Maldives%20with%20pristine%20turquoise%20lagoon%20water.%20Wooden%20walkways%20connecting%20water%20villas%20over%20crystal%20clear%20ocean.%20Perfect%20tropical%20vacation%20destination%20with%20palm%20trees%20and%20white%20sand%20beaches%20visible%20in%20background.&width=400&height=250&seq=3&orientation=landscape",
-        },
-        {
-            id: 4,
-            title: "Tropical Paradise",
-            location: "Bali, Indonesia",
-            rating: 4.8,
-            visits: "10K+ Visitors",
-            image:
-                "https://readdy.ai/api/search-image?query=Beautiful%20tropical%20island%20with%20crystal%20clear%20turquoise%20water%2C%20white%20sandy%20beaches%2C%20and%20lush%20green%20vegetation.%20Aerial%20view%20of%20a%20small%20island%20resort%20surrounded%20by%20coral%20reefs%20in%20Bali%2C%20Indonesia.%20Pristine%20beach%20paradise%20with%20bright%20sunny%20sky%20and%20calm%20ocean.&width=400&height=250&seq=1&orientation=landscape",
-        },
-        {
-            id: 5,
-            title: "Coastal Serenity",
-            location: "Santorini, Greece",
-            rating: 4.9,
-            visits: "15K+ Visitors",
-            image:
-                "https://readdy.ai/api/search-image?query=Stunning%20view%20of%20Santorini%20with%20white%20buildings%20and%20blue%20domes%20overlooking%20the%20clear%20blue%20Aegean%20Sea.%20Beautiful%20coastal%20town%20built%20on%20cliffs%20with%20pastel%20colored%20houses%20and%20amazing%20ocean%20view.%20Bright%20sunny%20day%20with%20perfect%20blue%20sky.&width=400&height=250&seq=2&orientation=landscape",
-        },
-    ];
 
     return (
         <div className="min-h-screen bg-white">
             <Header/>
-        {/* Hero Section */}
         <section className="relative overflow-hidden rounded-3xl mx-4 mt-4">
             <div className="relative bg-blue-50 rounded-3xl overflow-hidden">
                 <div className="container mx-auto px-8 py-16 flex flex-col md:flex-row items-center">
@@ -72,24 +26,23 @@ export default function Home() {
                             adventures with our premium flight services.
                         </p>
                         <div className="flex space-x-4">
-                            <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-medium cursor-pointer">
-                                Book A Trip Now
-                            </button>
+                            <Link to="/booking">
+                                <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-medium cursor-pointer">
+                                    Book A Trip Now
+                                </button>
+                            </Link>
 
-                            <button className="flex items-center text-gray-700 cursor-pointer">
-                                Know More
+                            <button className="flex items-center text-gray-700 hover:text-gray-900 cursor-pointer">
+                                <h2 className="">Know More</h2>
                                 <i className="fa fa-arrow-right ml-2"></i>
                             </button>
                         </div>
 
                         <div className="mt-8 flex items-center space-x-3">
-                            <div className="bg-white p-2 rounded-full shadow-md">
-                            <img
-                                src="https://readdy.ai/api/search-image?query=Airplane%20icon%20with%20blue%20background%2C%20minimalist%20design%2C%20clean%20lines%2C%20professional%20looking%2C%20suitable%20for%20travel%20website%2C%20high%20quality%20render%20with%20soft%20shadows%20and%20smooth%20edges%2C%20modern%20aviation%20symbol&width=40&height=40&seq=4&orientation=squarish"
-                                alt="Airplane"
-                                className="w-8 h-8 object-cover rounded-full"
-                            />
+                            <div className="bg-white p-2 rounded-full shadow-md bg-gray-200 cursor-pointer">
+                                <i className="fa fa-plane text-blue-500 px-5"></i>
                             </div>
+
                             <div>
                                 <p className="text-sm font-medium">Awesome Planes</p>
 
@@ -102,9 +55,9 @@ export default function Home() {
 
                     <div className="md:w-1/2 absolute right-0 top-0 h-full">
                         <img
-                            src="https://readdy.ai/api/search-image?query=Commercial%20passenger%20airplane%20taking%20off%20against%20blue%20sky%20with%20soft%20clouds%2C%20dramatic%20perspective%20shot%20from%20below%2C%20modern%20jet%20aircraft%20ascending%20into%20bright%20sky%2C%20wings%20and%20engines%20visible%2C%20professional%20aviation%20photography%20with%20perfect%20lighting&width=800&height=600&seq=5&orientation=landscape"
+                            src={Plane}
                             alt="Airplane in flight"
-                            className="w-full h-full object-cover object-top"
+                            className="w-full h-full object-cover object-center"
                         />
                     </div>
                 </div>
@@ -301,7 +254,7 @@ export default function Home() {
             <div className="flex flex-col md:flex-row bg-white rounded-xl overflow-hidden shadow-xl">
                 <div className="md:w-1/3 relative">
                     <img
-                        src="https://readdy.ai/api/search-image?query=Happy%20traveler%20on%20a%20tropical%20beach%20with%20clear%20blue%20water%2C%20person%20holding%20colorful%20fruits%2C%20joyful%20vacation%20moment%2C%20sunny%20day%20at%20exotic%20destination%2C%20vibrant%20colors%2C%20summer%20holiday%20atmosphere%2C%20travel%20lifestyle%20photography&width=400&height=500&seq=7&orientation=portrait"
+                        src={woman}
                         alt="Travel lifestyle"
                         className="w-full h-full object-cover object-top"
                     />
