@@ -1,3 +1,5 @@
+import Header from "../components/header"
+
 export default function About() {
 
     const teamMembers = [
@@ -102,6 +104,7 @@ export default function About() {
     ]
     return (
         <div className="min-h-screen bg-white">
+            <Header/>
         {/* Hero Section */}
             <section className="relative overflow-hidden">
                 <div className="absolute inset-0 z-0">

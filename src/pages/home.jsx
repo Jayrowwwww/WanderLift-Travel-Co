@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Header from "../components/header";
 
 export default function Home() {
-    const [activeDestination, setActiveDestination] = useState(0);
 
     const destinations = [
         {
@@ -54,7 +53,7 @@ export default function Home() {
 
     return (
         <div className="min-h-screen bg-white">
-            {Header}
+            <Header/>
         {/* Hero Section */}
         <section className="relative overflow-hidden rounded-3xl mx-4 mt-4">
             <div className="relative bg-blue-50 rounded-3xl overflow-hidden">

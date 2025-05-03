@@ -1,3 +1,4 @@
+import Header from "../components/header"
 
 export default function Tour(){
     const tourPackages = [
@@ -144,6 +145,7 @@ export default function Tour(){
     
     return (
         <div className="min-h-screen bg-white">
+            <Header/>
         {/* Hero Section */}
         <section className="relative overflow-hidden">
             <div className="absolute inset-0 z-0">
