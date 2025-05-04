@@ -280,19 +280,20 @@ export default function About() {
                                 </div>
 
                                 <div className="ml-10">
-                                    <h1 className="text-2xl font-semibold">{testimonial.name}</h1>
-                                    <h3 className="text-lg">{testimonial.location}</h3>
-                                    <p className="mt-2">{testimonial.quote}</p>
-                                    <div className="flex flex-col">
-                                        <h2 className="text-lg mt-5">Rating: {testimonial.rating} / 5 </h2>
+                                    <h1 className="text-2xl text-gray-800 font-semibold">{testimonial.name}</h1>
+                                    <h3 className="text-lg text-blue-600">{testimonial.location}</h3>
+                                    <p className="mt-2 text-gray-800 text-lg">{testimonial.quote}</p>
+                                    <div className="flex items-center">
+                                        <h2 className="text-lg mt-5">Rating:</h2>
 
-                                        <div className="flex mt-2">
-                                            <i className="fa fa-star text-yellow-400"></i>
-                                            <i className="fa fa-star text-yellow-400"></i>
-                                            <i className="fa fa-star text-yellow-400"></i>
-                                            <i className="fa fa-star text-yellow-400"></i>
-                                            <i className="fa fa-star text-yellow-400"></i>
-                                        </div>
+                                        <h2 className="mt-5 ml-2">          
+                                            {[...Array(5)].map((_, i) => (
+                                                <div
+                                                    key={i}
+                                                    className={`fa fa-star ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`}
+                                                ></div>
+                                            ))} 
+                                        </h2>
                                     </div>
                                 </div>
                             </div>
