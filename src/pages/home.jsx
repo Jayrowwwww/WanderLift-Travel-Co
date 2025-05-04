@@ -21,7 +21,7 @@ export default function Home() {
                             <br />
                             Magic Of Flight!
                         </h1>
-                        <p className="text-gray-600 mb-8">
+                        <p className="text-gray-900 md:text-gray-600 mb-8">
                             Discover seamless travel experiences and unforgettable
                             adventures with our premium flight services.
                         </p>
@@ -32,7 +32,7 @@ export default function Home() {
                                 </button>
                             </Link>
 
-                            <button className="flex items-center text-gray-700 hover:text-gray-900 cursor-pointer">
+                            <button className="flex items-center text-gray-900 md:text-gray-600 hover:text-gray-900 cursor-pointer">
                                 <h2 className="">Know More</h2>
                                 <i className="fa fa-arrow-right ml-2"></i>
                             </button>
@@ -46,7 +46,7 @@ export default function Home() {
                             <div>
                                 <p className="text-sm font-medium">Awesome Planes</p>
 
-                                <p className="text-xs text-gray-500">
+                                <p className="text-xs text-gray-900 md:text-gray-500">
                                     Modern fleet selection
                                 </p>
                             </div>

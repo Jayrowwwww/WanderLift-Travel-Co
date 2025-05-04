@@ -36,9 +36,11 @@ export default function About() {
                             excellence, innovation, and unforgettable journeys.
                         </p>
 
-                        <button className="bg-blue-500 text-white px-6 py-3 rounded-full text-sm font-medium cursor-pointer">
-                            Our Services
-                        </button>
+                        <Link to="/services">
+                            <button className="bg-blue-500 text-white px-6 py-3 rounded-full text-sm font-medium cursor-pointer">
+                                Our Services
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </section>

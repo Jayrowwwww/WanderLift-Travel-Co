@@ -6,6 +6,7 @@ import Tour from "./pages/tour"
 import Contact from "./pages/contact"
 import Submitted from "./pages/submitted"
 import Booking from "./pages/booking"
+import Services from "./pages/service"
 
 export default function App() {
 
@@ -20,7 +21,8 @@ export default function App() {
           <Route path="/tour" element={<Tour/>}/>
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/submitted" element={<Submitted/>}/>
-          <Route path="/booking" element={<Booking/>}/>        
+          <Route path="/booking" element={<Booking/>}/> 
+          <Route path="/services" element={<Services/>}/>       
         </Routes>
 
         <Footer/>
