@@ -10,7 +10,7 @@ export default function Submitted() {
                 <p className="text-lg text-gray-600 mb-8">Your message has been submitted successfully. <br /> we will get in touch to you as soon as possible</p>
 
                 <p className="text-lg text-gray-600 mb-8">We appreciate your interest in our services.</p>
-                <Link to="/" className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium !rounded-button whitespace-nowrap cursor-pointer">
+                <Link to="/" className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium cursor-pointer">
                     Back to Home
                 </Link>
             </div>

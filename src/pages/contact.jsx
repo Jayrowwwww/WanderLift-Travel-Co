@@ -32,14 +32,14 @@ export default function Contact() {
                     <div className="flex flex-wrap gap-4">
                         <a
                             href="#contact-form"
-                            className="bg-blue-500 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-blue-600 transition-colors !rounded-button whitespace-nowrap cursor-pointer"
+                            className="bg-blue-500 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-blue-600 transition-colors cursor-pointer"
                         >
                             Contact Us Now
                         </a>
 
                         <a
                             href="#map"
-                            className="bg-transparent border border-white text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors !rounded-button whitespace-nowrap cursor-pointer"
+                            className="bg-transparent border border-white text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition-colors cursor-pointer"
                         >
                             <i className="fas fa-map-marker-alt mr-2"></i> Find Our Location
                         </a>

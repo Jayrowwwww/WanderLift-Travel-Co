@@ -26,10 +26,10 @@ export default function Header(){
                 <i className='fa fa-bars'></i>
             </button>
 
-            <nav className="hidden md:flex items-center space-x-8">
+            <nav className="hidden md:flex items-center space-x-8 font-semibold">
                 <Link
-                to="/"
-                className="text-gray-600 hover:text-blue-500 cursor-pointer"
+                    to="/"
+                    className="text-gray-600 hover:text-blue-500 cursor-pointer"
                 >
                 HOME
                 </Link>
@@ -89,7 +89,7 @@ export default function Header(){
                     CONTACT
                 </Link>
 
-                <Link to="#" className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium !rounded-button whitespace-nowrap cursor-pointer">
+                <Link to="/booking" className="bg-gray-900 text-white px-6 py-2 rounded-full text-sm font-medium !rounded-button whitespace-nowrap cursor-pointer">
                     Book Trip
                 </Link>
             </nav>

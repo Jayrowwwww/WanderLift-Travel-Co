@@ -195,7 +195,7 @@ export default function Home() {
                     around the world.
                     </p>
 
-                    <button className="mt-4 text-blue-500 font-medium flex items-center cursor-pointer">
+                    <button className="mt-4 text-blue-500 font-medium flex items-center cursor-pointer hover:underline">
                         LEARN MORE
                         <i className="fa fa-arrow-right ml-2"></i>
                     </button>
@@ -221,7 +221,7 @@ export default function Home() {
                     different cultures, and gain unique experiences.
                     </p>
 
-                    <button className="mt-4 text-white font-medium flex items-center cursor-pointer">
+                    <button className="mt-4 text-white font-medium flex items-center cursor-pointer hover:underline">
                         LEARN MORE
                         <i className="fa fa-arrow-right ml-2"></i>
                     </button>
@@ -241,7 +241,7 @@ export default function Home() {
                         adventure right away.
                     </p>
 
-                    <button className="mt-4 text-blue-500 font-medium flex items-center cursor-pointer">
+                    <button className="mt-4 text-blue-500 font-medium flex items-center cursor-pointer hover:underline">
                         LEARN MORE
                         <i className="fa fa-arrow-right ml-2"></i>
                     </button>
@@ -276,10 +276,12 @@ export default function Home() {
                             services ensure you get the most out of every journey.
                         </p>
 
-                        <button className="bg-blue-50 text-blue-500 px-6 py-3 rounded-full font-medium flex items-center justify-center w-full md:w-auto cursor-pointer">
-                            Book A Flight Now
-                            <i className="fa fa-arrow-right ml-2"></i>
-                        </button>
+                        <Link to='/booking'>
+                            <button className="bg-blue-50 hover:bg-blue-500 text-blue-500 hover:text-blue-50 px-6 py-3 rounded-full font-medium flex items-center justify-center w-full md:w-auto cursor-pointer">
+                                Book A Flight Now
+                                <i className="fa fa-arrow-right ml-2"></i>
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

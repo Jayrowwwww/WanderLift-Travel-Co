@@ -8,7 +8,7 @@ const teamMembers = [
         id: 1,
         name: "Jerreh Salera",
         position: "CEO & Founder",
-        bio: "With over 20 years in the aviation industry, Jerreh founded WanderLift Travel Co. with a vision to transform the travel experience.",
+        bio: "With over 10 years in the aviation industry, Jerreh founded WanderLift Travel Co. with a vision to transform the travel experience.",
         image: CEO
     },
     {

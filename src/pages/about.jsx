@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Header from "../components/header"
 import teamMembers from "../data_components/staff"
 import testimonials from "../data_components/review"
@@ -35,7 +36,7 @@ export default function About() {
                             excellence, innovation, and unforgettable journeys.
                         </p>
 
-                        <button className="bg-blue-500 text-white px-6 py-3 rounded-full text-sm font-medium !rounded-button whitespace-nowrap cursor-pointer">
+                        <button className="bg-blue-500 text-white px-6 py-3 rounded-full text-sm font-medium cursor-pointer">
                             Our Services
                         </button>
                     </div>
@@ -185,8 +186,8 @@ export default function About() {
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                     <div className="bg-white p-6 rounded-xl shadow-lg text-center border border-gray-100">
-                        <div className="text-4xl font-bold text-blue-500 mb-2">15</div>
-                        <p className="text-gray-600">Years in Business</p>
+                        <div className="text-4xl font-bold text-blue-500 mb-2">1</div>
+                        <p className="text-gray-600">Year in Business</p>
                     </div>
 
                     <div className="bg-white p-6 rounded-xl shadow-lg text-center border border-gray-100">
@@ -391,9 +392,11 @@ export default function About() {
                             that defines the WanderLift Travel Co. experience.
                         </p>
 
-                        <button className="bg-blue-500 text-white px-8 py-3 rounded-full text-lg font-medium !rounded-button whitespace-nowrap cursor-pointer">
-                            Book Your Journey Today
-                        </button>
+                        <Link to='/booking'>
+                            <button className="bg-blue-500 text-white px-8 py-3 rounded-full text-lg font-medium  cursor-pointer">
+                                Book Your Journey Today
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </section>
