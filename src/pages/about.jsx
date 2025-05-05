@@ -241,21 +241,22 @@ export default function About() {
 
                                 <p className="text-blue-500 mb-3">{member.position}</p>
                                 <p className="text-gray-600 text-sm">{member.bio}</p>
-                            <div className="mt-4 flex space-x-3">
-                                <a
-                                    href="#"
-                                    className="text-gray-400 hover:text-blue-500 cursor-pointer"
-                                >
-                                    <i className="fab fa-linkedin"></i>
-                                </a>
+                                
+                                <div className="mt-4 flex space-x-3">
+                                    <a
+                                        href="#"
+                                        className="text-gray-400 hover:text-blue-500 cursor-pointer"
+                                    >
+                                        <i className="fab fa-linkedin"></i>
+                                    </a>
 
-                                <a
-                                    href="#"
-                                    className="text-gray-400 hover:text-blue-500 cursor-pointer"
-                                >
-                                    <i className="fab fa-twitter"></i>
-                                </a>
-                            </div>
+                                    <a
+                                        href="#"
+                                        className="text-gray-400 hover:text-blue-500 cursor-pointer"
+                                    >
+                                        <i className="fab fa-twitter"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         ))}
@@ -279,7 +280,10 @@ export default function About() {
                         <div key={testimonial.id} className="shadow-xl px-5 py-10 rounded-xl ">
                             <div className="flex items-center overflow-hidden">
                                 <div className="rounded-xl">
-                                    <img src={testimonial.image} alt={testimonial.name} className="rounded-full h-30"/>
+                                    <img 
+                                        src={testimonial.image} 
+                                        alt={testimonial.name} 
+                                        className="h-full w-full md:h-30 object-cover rounded-full"/>
                                 </div>
 
                                 <div className="ml-10">
@@ -287,13 +291,13 @@ export default function About() {
                                     <h3 className="text-lg text-blue-600">{testimonial.location}</h3>
                                     <p className="mt-2 text-gray-800 text-lg">{testimonial.quote}</p>
                                     <div className="flex items-center">
-                                        <h2 className="text-lg mt-5">Rating:</h2>
+                                        <h2 className="text-lg font-semibold mt-5">Rating:</h2>
 
                                         <h2 className="mt-5 ml-2">          
-                                            {[...Array(5)].map((_, i) => (
+                                            {[...Array(5)].map((_, star) => (
                                                 <div
-                                                    key={i}
-                                                    className={`fa fa-star ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`}
+                                                    key={star}
+                                                    className={`fa fa-star ${star < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`}
                                                 ></div>
                                             ))} 
                                         </h2>
@@ -370,7 +374,7 @@ export default function About() {
                     </div>
                 </div>
             </section>
-            {/* Call-to-Action */}
+            {/* semi-footer */}
             <section className="relative py-16">
                 <div className="absolute inset-0 z-0">
                     <img

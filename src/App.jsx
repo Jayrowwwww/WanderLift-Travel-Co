@@ -7,6 +7,7 @@ import Contact from "./pages/contact"
 import Submitted from "./pages/submitted"
 import Booking from "./pages/booking"
 import Services from "./pages/service"
+import Error from "./pages/404err"
 
 export default function App() {
 
@@ -22,7 +23,8 @@ export default function App() {
           <Route path="/contact" element={<Contact/>}/>
           <Route path="/submitted" element={<Submitted/>}/>
           <Route path="/booking" element={<Booking/>}/> 
-          <Route path="/services" element={<Services/>}/>       
+          <Route path="/services" element={<Services/>}/>
+          <Route path="/404error" element={<Error/>}/>       
         </Routes>
 
         <Footer/>

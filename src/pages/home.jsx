@@ -32,14 +32,16 @@ export default function Home() {
                                 </button>
                             </Link>
 
-                            <button className="flex items-center text-gray-900 md:text-gray-600 hover:text-gray-900 cursor-pointer">
-                                <h2 className="">Know More</h2>
-                                <i className="fa fa-arrow-right ml-2"></i>
-                            </button>
+                            <Link to="/404error" className="flex items-center">
+                                <button className="flex justify-center items-center text-gray-900 md:text-gray-600 hover:text-gray-900 cursor-pointer">
+                                    <h2 className="">Know More</h2>
+                                    <i className="fa fa-arrow-right ml-2"></i>
+                                </button>
+                            </Link>
                         </div>
 
                         <div className="mt-8 flex items-center space-x-3">
-                            <div className="bg-white p-2 rounded-full shadow-md bg-gray-200 cursor-pointer">
+                            <div className="p-2 rounded-full shadow-md bg-white cursor-pointer">
                                 <i className="fa fa-plane text-blue-500 px-5"></i>
                             </div>
 
@@ -195,21 +197,15 @@ export default function Home() {
                     around the world.
                     </p>
 
-                    <button className="mt-4 text-blue-500 font-medium flex items-center cursor-pointer hover:underline">
-                        LEARN MORE
-                        <i className="fa fa-arrow-right ml-2"></i>
-                    </button>
+                    <Link to="/404error">
+                        <button className="mt-4 text-blue-500 font-medium flex items-center cursor-pointer hover:underline">
+                            LEARN MORE
+                            <i className="fa fa-arrow-right ml-2"></i>
+                        </button>
+                    </Link>
                 </div>
 
                 <div className="bg-blue-500 p-6 rounded-xl shadow-lg text-white relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-24 h-24 opacity-10">
-                        <img
-                            src="https://readdy.ai/api/search-image?query=Abstract%20circular%20pattern%20with%20dots%20and%20lines%2C%20blue%20and%20white%20color%20scheme%2C%20modern%20tech%20feel%2C%20suitable%20for%20background%20element%2C%20digital%20network%20concept%2C%20minimalist%20design%20with%20geometric%20shapes&width=100&height=100&seq=6&orientation=squarish"
-                            alt="Pattern"
-                            className="w-full h-full object-cover"
-                        />
-                    </div>
-
                     <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-4">
                         <i className="fa fa-ticket-alt text-sky-600"></i>
                     </div>
@@ -221,10 +217,12 @@ export default function Home() {
                     different cultures, and gain unique experiences.
                     </p>
 
-                    <button className="mt-4 text-white font-medium flex items-center cursor-pointer hover:underline">
-                        LEARN MORE
-                        <i className="fa fa-arrow-right ml-2"></i>
-                    </button>
+                    <Link to="/404error">
+                        <button className="mt-4 text-gray-100 font-medium flex items-center cursor-pointer hover:underline">
+                            LEARN MORE
+                            <i className="fa fa-arrow-right ml-2"></i>
+                        </button>
+                    </Link>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
@@ -241,10 +239,12 @@ export default function Home() {
                         adventure right away.
                     </p>
 
-                    <button className="mt-4 text-blue-500 font-medium flex items-center cursor-pointer hover:underline">
-                        LEARN MORE
-                        <i className="fa fa-arrow-right ml-2"></i>
-                    </button>
+                    <Link to="/404error">
+                        <button className="mt-4 text-blue-500 font-medium flex items-center cursor-pointer hover:underline">
+                            LEARN MORE
+                            <i className="fa fa-arrow-right ml-2"></i>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </section>
