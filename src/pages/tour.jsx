@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "../components/header"
 import tourPackages from "../data_components/packages";
 import tourCategories from "../data_components/categorie";
@@ -69,7 +70,7 @@ export default function Tour(){
                             </div>
 
                             <div className="md:self-end">
-                                <button className="w-full bg-blue-500 text-white px-6 py-2 rounded-lg font-medium cursor-pointer">
+                                <button className="w-full bg-blue-500 text-white px-6 py-2 rounded-lg font-medium cursor-pointer" onClick={() => alert(`Searching Tours!`)}>
                                     <i className="fa fa-search mr-2"></i> Search Tours
                                 </button>
                             </div>
@@ -111,10 +112,12 @@ export default function Tour(){
 
                             <p className="text-gray-600 mb-4">{category.description}</p>
 
-                            <button className="text-blue-500 font-medium flex items-center cursor-pointer">
-                                Explore 
-                                <i className="fa fa-arrow-right ml-2"></i>
-                            </button>
+                            <Link to='/404error'>
+                                <button className="text-blue-500 font-medium flex items-center cursor-pointer">
+                                    Explore 
+                                    <i className="fa fa-arrow-right ml-2"></i>
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 ))}

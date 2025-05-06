@@ -10,7 +10,7 @@ export default function Footer(){
             <div>
               <div className="text-2xl font-bold flex items-center mb-4">
                 <div className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center mr-2">
-                  <img src={logo} alt="logo" />
+                  <img src={logo} alt="logo"/>
                 </div>
                 WanderLift Travel Co.
               </div>

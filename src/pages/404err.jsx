@@ -10,7 +10,7 @@ export default function Error(){
                 <p className="text-lg mt-2">The resources requested is not found in the server</p>
 
                 <Link to="/" className="mt-5">
-                    <button className="flex items-center bg-gray-600 text-gray-300 px-5 py-2 rounded-3xl cursor-pointer">
+                    <button className="flex items-center bg-gray-600 hover:bg-blue-500 text-gray-300 hover:text-gray-100 px-5 py-2 rounded-3xl cursor-pointer transition-colors duration-100">
                         <i className="fa fa-arrow-left mr-1"></i>
                         <h2>Back Home</h2>
                     </button>

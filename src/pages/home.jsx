@@ -45,13 +45,13 @@ export default function Home() {
                                 <i className="fa fa-plane text-blue-500 px-5"></i>
                             </div>
 
-                            <div>
+                            <Link to='/404error'>
                                 <p className="text-sm font-medium">Awesome Planes</p>
 
                                 <p className="text-xs text-gray-900 md:text-gray-500">
                                     Modern fleet selection
                                 </p>
-                            </div>
+                            </Link>
                         </div>
                     </div>
 
@@ -72,15 +72,15 @@ export default function Home() {
                 <div className="text-sm text-gray-500 mr-4">Follow us on:</div>
 
                 <div className="flex space-x-4 text-gray-400">
-                    <a href="#">
+                    <a href="https://x.com/">
                         <i className="fab fa-twitter cursor-pointer hover:text-sky-400"></i>
                     </a>
                     
-                    <a href="#">
+                    <a href="https://www.facebook.com/">
                         <i className="fab fa-facebook cursor-pointer hover:text-blue-600"></i>
                     </a>
 
-                    <a href="#">
+                    <a href="https://www.instagram.com/">
                         <i className="fab fa-instagram cursor-pointer hover:text-pink-500"></i>
                     </a>
                 </div>
@@ -122,7 +122,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-6 cursor-pointer">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 cursor-pointer">
                 {destinations.map((destination) => (
                     <div
                     key={destination.id}

@@ -60,7 +60,7 @@ export default function About() {
                 </div>
 
                 <div className="relative">
-                    <div className="absolute flex left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-100"></div>
+                    <div className="absolute hidden sm:flex sm:left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-100"></div>
 
                     <div className="space-y-12">
                         {timelineEvents.map((event, index) => (
@@ -68,8 +68,8 @@ export default function About() {
                                 key={index}
                                 className={`flex items-center ${index % 2 === 0  ? "flex-row" : "flex-row-reverse"}`}
                             >
-                                <div className="w-1/2"></div>
-                                    <div className="z-10 flex-shrink-0 w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center shadow-lg">
+                                <div className="w-1 sm:w-1/2"></div>
+                                    <div className="z-10 w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center shadow-lg">
                                         <i className="fa fa-plane text-white"></i>
                                     </div>
 
