@@ -15,29 +15,29 @@ export default function Footer(){
                 WanderLift Travel Co.
               </div>
               <p className="text-gray-400 mb-4">
-                Elevating your travel experience since 2010.
+                Elevating your travel experience since 2024.
               </p>
               <div className="flex space-x-4">
                 <Link
-                  to="#"
+                  to="https://www.facebook.com/"
                   className="text-gray-400 hover:text-blue-400 cursor-pointer"
                 >
                   <i className="fab fa-facebook-f"></i>
                 </Link>
                 <Link
-                  to="#"
+                  to="https://www.x.com/"
                   className="text-gray-400 hover:text-blue-400 cursor-pointer"
                 >
                   <i className="fab fa-twitter"></i>
                 </Link>
                 <Link
-                  to="#"
+                  to="https://www.instagram.com/"
                   className="text-gray-400 hover:text-blue-400 cursor-pointer"
                 >
                   <i className="fab fa-instagram"></i>
                 </Link>
                 <Link
-                  to="#"
+                  to="https://www.linkedin.com/"
                   className="text-gray-400 hover:text-blue-400 cursor-pointer"
                 >
                   <i className="fab fa-linkedin-in"></i>
@@ -48,37 +48,36 @@ export default function Footer(){
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link
-                    to="/"
-                    data-readdy="true"
+                  <a
+                    href="/"
                     className="text-gray-400 hover:text-white cursor-pointer"
                   >
                     Home
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    to="/about"
+                  <a
+                    href="/about"
                     className="text-gray-400 hover:text-white cursor-pointer"
                   >
                     About Us
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    to="/tour"
+                  <a
+                    href="/tour"
                     className="text-gray-400 hover:text-white cursor-pointer"
                   >
                     Destinations
-                  </Link>
+                  </a>
                 </li>
                 <li>
-                  <Link
-                    to="/contact"
+                  <a
+                    href="/contact"
                     className="text-gray-400 hover:text-white cursor-pointer"
                   >
                     Contact
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>

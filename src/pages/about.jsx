@@ -6,6 +6,7 @@ import timelineEvents from "../data_components/timeline"
 import airport from "../assets/_imgs/bg/sec_page.jpg"
 import plane_wing from "../assets/_imgs/bg/sec_page _lower.jpg"
 
+
 export default function About() {
 
     return (
@@ -30,7 +31,7 @@ export default function About() {
                         </h1>
 
                         <p className="text-lg text-blue-50 mb-8">
-                            Since 2010, WanderLift Travel Co. has been dedicated to transforming the way
+                            Since 2024, WanderLift Travel Co. has been dedicated to transforming the way
                             people experience air travel. What began as a small charter
                             service has grown into a global aviation company committed to
                             excellence, innovation, and unforgettable journeys.
@@ -46,7 +47,7 @@ export default function About() {
             </section>
 
             {/* Company History Timeline */}
-            <section className="container mx-auto px-4 py-16">
+            <section className="container mx-auto px-4 py-15">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl font-bold text-gray-800 mb-4">
                         Our Journey Through The Years
@@ -69,14 +70,16 @@ export default function About() {
                                 className={`flex items-center ${index % 2 === 0  ? "flex-row" : "flex-row-reverse"}`}
                             >
                                 <div className="w-1 sm:w-1/2"></div>
-                                    <div className="z-10 w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center shadow-lg">
+                                    <div className={`z-10 w-12 h-12 rounded-full bg-blue-500 flex ${index % 2 === 0 ? "rotate-180 bg-blue-900" : "rotate-0"}  items-center justify-center shadow-lg`}>
                                         <i className="fa fa-plane text-white"></i>
                                     </div>
 
+                                <div className={`hidden 2xl:inline absolute bg-blue-200 w-10 h-1 ${index % 2 === 0 ? "right-175" : "left-175" }`}></div>
+
                                 <div
-                                    className={`w-1/2 p-6 ${index % 2 === 0 ? "pr-12" : "pl-12"}`}
+                                    className={`w-1/2 p-6 z-1 ${index % 2 === 0 ? "pr-5" : "pl-5"}`}
                                     >
-                                    <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+                                    <div className="bg-white p-3 rounded-xl shadow-lg border border-gray-100">
                                         <span className="text-blue-500 text-2xl font-bold">{event.year}</span>
                                         <h3 className="text-xl font-semibold text-gray-800 mt-2">{event.title}</h3>
                                         <p className="text-gray-600 mt-2">{event.description}</p>
@@ -277,16 +280,18 @@ export default function About() {
 
                 <div className="flex flex-col space-y-15">
                     {testimonials.map((testimonial) => (
-                        <div key={testimonial.id} className="shadow-xl px-5 py-10 rounded-xl ">
-                            <div className="flex items-center overflow-hidden">
-                                <div className="rounded-xl">
+                        <div 
+                            key={testimonial.id} 
+                            className="shadow-xl px-5 py-10 rounded-xl ">
+                            <div className="overflow-hidden ml-10">
+                                <div className="rounded-full h-30 w-30 overflow-hidden shadow-lg">
                                     <img 
                                         src={testimonial.image} 
                                         alt={testimonial.name} 
-                                        className="h-full w-full md:h-30 object-cover rounded-full"/>
+                                        className="h-full  object-cover"/>
                                 </div>
 
-                                <div className="ml-10">
+                                <div className="mt-3">
                                     <h1 className="text-2xl text-gray-800 font-semibold">{testimonial.name}</h1>
                                     <h3 className="text-lg text-blue-600">{testimonial.location}</h3>
                                     <p className="mt-2 text-gray-800 text-lg">{testimonial.quote}</p>
@@ -314,12 +319,12 @@ export default function About() {
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-12">
                         <h2 className="text-3xl font-bold text-gray-800 mb-4">
-                        Awards & Recognition
+                            Awards & Recognition
                         </h2>
 
                         <p className="text-gray-600 max-w-2xl mx-auto">
-                        Our commitment to excellence has been recognized by industry
-                        leaders and organizations worldwide.
+                            Our commitment to excellence has been recognized by industry
+                            leaders and organizations worldwide.
                         </p>
                     </div>
 
@@ -398,11 +403,11 @@ export default function About() {
                             that defines the WanderLift Travel Co. experience.
                         </p>
 
-                        <Link to='/booking'>
+                        <a href='/booking'>
                             <button className="bg-blue-500 text-white px-8 py-3 rounded-full text-lg font-medium  cursor-pointer">
                                 Book Your Journey Today
                             </button>
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </section>
