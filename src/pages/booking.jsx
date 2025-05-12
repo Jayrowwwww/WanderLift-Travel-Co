@@ -1,31 +1,11 @@
+import Header_2 from '../components/header_2';
 import popularDestinations from '../data_components/booking'
-import { Link } from 'react-router-dom';
-import logo from '/favicon.png'
 
 export default function Booking() {
 
     return (
-        <div className="bg-gray-100 font-sans leading-normal tracking-normal">
-            <header className="bg-white shadow-sm">
-                <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-                    <div className="flex items-center">
-                        <Link to="/" className="cursor-pointer">
-                            <div className="text-2xl font-bold text-gray-800 flex items-center">
-                                <div className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center mr-2">
-                                    <img src={logo} alt="logo" />
-                                </div>
-                                WonderLift Travel Co.
-                            </div>
-                        </Link>
-                    </div>
-
-                    <Link to="/" className="flex items-center text-gray-600 hover:text-blue-500 cursor-pointer">
-                        <i className="fa fa-arrow-left mr-2"></i>
-                        Back to Home
-                    </Link>
-                </div>
-            </header>
-
+        <div className="bg-gray-100 font-sans">
+            <Header_2/>
         <main className="container mx-auto px-4 py-8 min-h-[800px]">
             <div className="max-w-4xl mx-auto">
                 <div className="bg-white rounded-xl shadow-sm p-8 mb-8">
@@ -40,19 +20,19 @@ export default function Booking() {
                                 {popularDestinations.map((destination) => (
                                 <div
                                     key={destination.id}
-                                    className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow cursor-pointer"
+                                    className="group border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow cursor-pointer"
                                 >
-                                    <div className="overflow-hidden">
+                                    <div className="h-50 overflow-hidden">
                                         <img
                                             src={destination.image}
                                             alt={destination.name}
-                                            className="w-full h-full object-cover object-top transition-transform hover:scale-105 duration-300"
+                                            className="w-full h-full object-cover object-center transition-transform group-hover:scale-105 duration-300"
                                         />
                                     </div>
 
                                     <div className="flex justify-between p-4">
                                         <h4 className="font-medium text-gray-800">{destination.name}</h4>
-                                        <button className='border-1 border-gray-400 text-gray-400 active:text-white active:bg-blue-500 active:border-white text-sm px-5 rounded-lg'>Select</button>
+                                        <button className='border-1 border-gray-400 text-gray-400 active:text-white active:bg-blue-500 active:border-white text-sm px-5 h-6 rounded-lg'>Select</button>
                                     </div>
                                 </div>
                                 ))}
@@ -64,7 +44,8 @@ export default function Booking() {
                         <button
                             className="px-6 py-3 rounded-lg font-medium flex items-center"
                         >
-                            <i className="fa fa-arrow-left mr-2"></i> Previous
+                            <i className="fa fa-arrow-left mr-2"></i> 
+                            Previous
                         </button>
 
                         <div className="flex space-x-4">

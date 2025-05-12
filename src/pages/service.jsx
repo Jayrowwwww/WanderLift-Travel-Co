@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import Header from "../components/header";
+import Header_2 from '../components/header_2'
 import services from "../data_components/services";
 
 export default function Services() {
   return (
     <div className="bg-gray-50 min-h-screen ">
-        <Header/>
+        <Header_2 />
         <div className="py-12 px-4 sm:px-6 lg:px-8">  
             <div className="container mx-auto">
                 <h2 className="text-5xl font-bold text-center text-blue-500 mb-10">

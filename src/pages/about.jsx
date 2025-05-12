@@ -67,10 +67,10 @@ export default function About() {
                         {timelineEvents.map((event, index) => (
                             <div
                                 key={index}
-                                className={`flex items-center ${index % 2 === 0  ? "flex-row" : "flex-row-reverse"}`}
+                                className={`flex items-center ${index % 2 === 0  ? "flex-row-reverse sm:flex-row" : "flex-row sm:flex-row-reverse"}`}
                             >
                                 <div className="w-1 sm:w-1/2"></div>
-                                    <div className={`z-10 w-12 h-12 rounded-full bg-blue-500 flex ${index % 2 === 0 ? "rotate-180 bg-blue-900" : "rotate-0"}  items-center justify-center shadow-lg`}>
+                                    <div className={`z-10 w-12 h-12 rounded-full bg-blue-500 flex ${index % 2 === 0 ? "sm:rotate-180 bg-blue-900" : " rotate-180 sm:rotate-0"}  items-center justify-center shadow-lg`}>
                                         <i className="fa fa-plane text-white"></i>
                                     </div>
 
@@ -296,7 +296,7 @@ export default function About() {
                                     <h3 className="text-lg text-blue-600">{testimonial.location}</h3>
                                     <p className="mt-2 text-gray-800 text-lg">{testimonial.quote}</p>
                                     <div className="flex items-center">
-                                        <h2 className="text-lg font-semibold mt-5">Rating:</h2>
+                                        <h2 className="text-lg text-gray-700 font-semibold mt-5">Rating:</h2>
 
                                         <h2 className="mt-5 ml-2">          
                                             {[...Array(5)].map((_, star) => (

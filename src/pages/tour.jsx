@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Header from "../components/header"
 import tourPackages from "../data_components/packages";
 import tourCategories from "../data_components/categorie";
@@ -171,10 +170,10 @@ export default function Tour(){
                                 <select
                                     className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 appearance-none text-gray-700"
                                 >
-                                    <option value="All">All Prices</option>
-                                    <option value="Under $2000">Under $2,000</option>
-                                    <option value="$2000-$3000">$2,000 - $3,000</option>
-                                    <option value="Over $3000">Over $3,000</option>
+                                    <option>All Prices</option>
+                                    <option>Under $2,000</option>
+                                    <option>$2,000 - $3,000</option>
+                                    <option>Over $3,000</option>
                                 </select>
 
                                 <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
@@ -190,10 +189,10 @@ export default function Tour(){
                             <select
                                 className="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-2 appearance-none text-gray-700"
                             >
-                                <option value="All">Any Duration</option>
-                                <option value="Under 7 days">Under 7 days</option>
-                                <option value="7-10 days">7-10 days</option>
-                                <option value="Over 10 days">Over 10 days</option>
+                                <option>Any Duration</option>
+                                <option>Under 7 days</option>
+                                <option>7-10 days</option>
+                                <option>Over 10 days</option>
                             </select>
                             <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
                                 <i className="fa fa-chevron-down text-gray-400"></i>
@@ -231,11 +230,11 @@ export default function Tour(){
                         key={tour.id}
                         className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                         >
-                            <div className="relative h-56 overflow-hidden">
+                            <div className="relative h-80 overflow-hidden">
                                 <img
                                 src={tour.image}
                                 alt={tour.name}
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover object-center"
                                 />
 
                                 <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-medium text-blue-500">
@@ -243,7 +242,7 @@ export default function Tour(){
                                 </div>
                             </div>
 
-                            <div className="p-6">
+                            <div className="p-5">
                                 <div className="flex justify-between items-start mb-2">
                                     <h3 className="text-xl font-semibold text-gray-800">
                                         {tour.name}
@@ -283,7 +282,7 @@ export default function Tour(){
 
 
                 <div className="mt-12 text-center">
-                    <button className="bg-white border border-blue-500 text-blue-500 px-6 py-2 rounded-full font-medium hover:bg-blue-50 transition-colors cursor-pointer">
+                    <button className="bg-white border border-blue-500 text-blue-500 px-6 py-2 rounded-full font-medium hover:bg-blue-50 transition-colors cursor-pointer" onClick={() => alert('To be Added')}>
                         View All Tours
                     </button>
                 </div>

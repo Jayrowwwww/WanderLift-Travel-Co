@@ -4,7 +4,7 @@ import logo from '/favicon.png'
 export default function Header(){
 
     function handleMenuClick() {
-        const menu = document.querySelector('.menu');
+        const menu = document.getElementById('menu');
         menu.classList.toggle('hidden');
     }
 
@@ -60,7 +60,7 @@ export default function Header(){
                 </Link>
             </nav>
 
-            <nav className="menu hidden md:hidden absolute top-15 right-4 bg-white shadow-lg rounded-lg p-4 space-y-5 z-99">
+            <nav className="hidden md:hidden absolute top-15 right-4 bg-white shadow-lg rounded-lg p-4 space-y-5 z-99" id='menu'>
                 <Link
                     to="/"
                     className="block text-gray-600 hover:text-blue-500 cursor-pointer"

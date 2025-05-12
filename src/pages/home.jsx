@@ -125,7 +125,7 @@ export default function Home() {
                     {destinations.map((destination) => (
                         <div
                             key={destination.id}
-                            className='bg-white rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-101 hover:ring-1 ring-sky-500'
+                            className='bg-white rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-101 hover:ring-1 ring-blue-500'
                         >
                             <div className="relative h-48 overflow-hidden">
                                 <img
@@ -206,7 +206,7 @@ export default function Home() {
 
                     <div className="bg-blue-500 p-6 rounded-xl shadow-lg text-white relative overflow-hidden">
                         <div className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-4">
-                            <i className="fa fa-ticket-alt text-sky-600"></i>
+                            <i className="fa fa-ticket-alt text-blue-500"></i>
                         </div>
 
                         <h3 className="text-xl font-semibold mb-2">Book A Ticket</h3>
