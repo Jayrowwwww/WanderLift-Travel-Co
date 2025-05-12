@@ -112,12 +112,12 @@ export default function Tour(){
 
                             <p className="text-gray-600 mb-4">{category.description}</p>
 
-                            <Link to='/404error'>
+                            <a href='/404error'>
                                 <button className="text-blue-500 font-medium flex items-center cursor-pointer">
                                     Explore 
                                     <i className="fa fa-arrow-right ml-2"></i>
                                 </button>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 ))}

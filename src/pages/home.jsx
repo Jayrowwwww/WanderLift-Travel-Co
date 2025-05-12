@@ -1,19 +1,11 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
 import Header from "../components/header";
 import destinations from "../data_components/destinations";
 import woman from '../assets/_imgs/bg/first_page_lower.jpg'
-import Slider from "../components/imageSlider";
+import Jetski from '../assets/_imgs/bg/jetski.jpg'
 
 
 export default function Home() {
-    const [slider, setSlider] = useState(0);
-
-    useEffect(() => {
-        setInterval(() => {
-            setSlider((count) => { return count === 2 ? 0 : count + 1 })
-        }, 10000);
-    }, [])
 
     return (
         <div className="min-h-screen bg-white">
@@ -42,12 +34,12 @@ export default function Home() {
                                     </button>
                                 </Link>
 
-                                <Link to="/404error" className="flex items-center">
+                                <a href="/404error" className="flex items-center">
                                     <button className="flex justify-center items-center text-gray-900 md:text-gray-600 hover:text-gray-900 cursor-pointer">
                                         <h2>Know More</h2>
                                         <i className="fa fa-arrow-right ml-2"></i>
                                     </button>
-                                </Link>
+                                </a>
                             </div>
 
                             <div className="mt-8 flex items-center space-x-3">
@@ -55,19 +47,19 @@ export default function Home() {
                                     <i className="fa fa-plane text-blue-500 px-5"></i>
                                 </div>
 
-                                <Link to='/404error'>
+                                <a href='/404error'>
                                     <p className="text-sm font-medium">Awesome Planes</p>
 
                                     <p className="text-xs text-gray-900 md:text-gray-500">
                                         Modern fleet selection
                                     </p>
-                                </Link>
+                                </a>
                             </div>
                         </div>
 
                         <div className="absolute md:w-1/2 h-full top-0 right-0 overflow-hidden">
-                            <div className="absolute bg-linear-to-r inset-0 from-blue-100 via-blue-100/0 to-blue-100/0"></div>
-                            <Slider slider={slider} />
+                            <div className="absolute bg-linear-to-t md:bg-linear-to-r inset-0 from-blue-100 md:via-blue-100/0 to-blue-100/0"></div>
+                            <img src={Jetski} className="h-full w-full object-cover object-center"/>
                         </div>
                     </div>
                 </div>
@@ -139,7 +131,7 @@ export default function Home() {
                                 <img
                                     src={destination.image}
                                     alt={destination.title}
-                                    className="w-full h-full object-cover object-top"
+                                    className="w-full h-full object-cover object-center"
                                 />
                             </div>
 
@@ -224,12 +216,12 @@ export default function Home() {
                             different cultures, and gain unique experiences.
                         </p>
 
-                        <Link to="/404error">
+                        <a href="/404error">
                             <button className="mt-4 text-gray-100 font-medium flex items-center cursor-pointer hover:underline">
                                 LEARN MORE
                                 <i className="fa fa-arrow-right ml-2"></i>
                             </button>
-                        </Link>
+                        </a>
                     </div>
 
                     <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
@@ -246,12 +238,12 @@ export default function Home() {
                             adventure right away.
                         </p>
 
-                        <Link to="/404error">
+                        <a href="/404error">
                             <button className="mt-4 text-blue-500 font-medium flex items-center cursor-pointer hover:underline">
                                 LEARN MORE
                                 <i className="fa fa-arrow-right ml-2"></i>
                             </button>
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -283,12 +275,12 @@ export default function Home() {
                                 services ensure you get the most out of every journey.
                             </p>
 
-                            <Link to='/booking'>
+                            <a href='/booking'>
                                 <button className="bg-blue-50 hover:bg-blue-500 text-blue-500 hover:text-blue-50 px-6 py-3 rounded-full font-medium flex items-center justify-center w-full md:w-auto cursor-pointer">
                                     Book A Flight Now
                                     <i className="fa fa-arrow-right ml-2"></i>
                                 </button>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>

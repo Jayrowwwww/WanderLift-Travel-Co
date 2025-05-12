@@ -42,7 +42,7 @@ export default function Booking() {
                                     key={destination.id}
                                     className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow cursor-pointer"
                                 >
-                                    <div className="h-40 overflow-hidden">
+                                    <div className="overflow-hidden">
                                         <img
                                             src={destination.image}
                                             alt={destination.name}
