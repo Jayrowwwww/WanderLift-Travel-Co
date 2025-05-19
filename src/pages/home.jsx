@@ -10,8 +10,10 @@ export default function Home() {
     return (
         <div className="min-h-screen bg-white">
             {/*Landing-Page*/}
-            <Header />
-            <section className="relative overflow-hidden rounded-3xl mx-4 mt-4">
+            <header className="slide-down">
+                <Header />  
+            </header>
+            <section className="relative overflow-hidden rounded-3xl mx-4 mt-4 slide-up">
                 <div className="relative bg-blue-100 rounded-3xl overflow-hidden">
                     <div className="container mx-auto px-8 py-16 flex flex-col md:flex-row items-center">
                         <div className="md:w-1/2 z-10">
@@ -66,7 +68,7 @@ export default function Home() {
             </section>
 
             {/* Partners */}
-            <div className="container mx-auto px-4 py-8 border-b">
+            <div className="container mx-auto px-4 py-8 border-b delay-slide-up">
                 <div className="flex flex-wrap items-center justify-between">
                     <div className="text-sm text-gray-500 mr-4">Follow us on:</div>
 
@@ -109,7 +111,7 @@ export default function Home() {
             </div>
 
             {/* Popular Destinations */}
-            <section className="container mx-auto px-4 py-12">
+            <section className="container mx-auto px-4 py-12 delay-slide-up-2">
                 <div className="flex justify-between items-center mb-6">
                     <div>
                         <h2 className="text-2xl font-bold text-gray-800">
@@ -285,6 +287,39 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
+            <style jsx>{`
+                @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+                }
+
+                @keyframes fadeIn2 {
+                from { opacity: 0; transform: translateX(20px); }
+                to { opacity: 1; transform: translateX(0); }
+                }
+
+                @keyframes fadeIn3 {
+                from { opacity: 0; transform: translateY(-20px); }
+                to { opacity: 1; transform: translateY(0); }
+                }
+
+                .slide-down{
+                animation: fadeIn3 0.8s ease-in;
+                }
+
+                .slide-up {
+                animation: fadeIn 0.5s ease-in;
+                }
+
+                .delay-slide-up {
+                animation: fadeIn2 300ms ease-in;
+                }
+
+                .delay-slide-up-2 {
+                animation: fadeIn 400ms ease-in;
+                }
+            `}</style>
         </div>
     )
 }

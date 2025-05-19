@@ -22,7 +22,7 @@ export default function Header(){
                 </Link>
             </div>
 
-            <button className='md:hidden flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500' onClick={handleMenuClick}>
+            <button className='md:hidden flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 fixed z-99 right-4' onClick={handleMenuClick}>
                 <i className='fa fa-bars'></i>
             </button>
 
@@ -60,7 +60,7 @@ export default function Header(){
                 </Link>
             </nav>
 
-            <nav className="hidden md:hidden absolute top-15 right-4 bg-white shadow-lg rounded-lg p-4 space-y-5 z-99" id='menu'>
+            <nav className="hidden md:hidden top-15 right-4 bg-white shadow-lg rounded-lg p-4 space-y-5 z-99 fixed" id='menu'>
                 <Link
                     to="/"
                     className="block text-gray-600 hover:text-blue-500 cursor-pointer"
